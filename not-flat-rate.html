@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Not Flat Rate Application</title>
+
+  <!-- Bootstrap Scripts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu&display=swap" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+
+</head>
+
+
+<body>
+
+  <section class="main">
+    <div class="container-fluid">
+
+      <!-- Nav Bar logo -->
+      <nav class="navbar navbar-expand-lg  navbar-dark">
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.png" width="200" height="70" alt="">
+        </a>
+      </nav>
+
+      <div class="title">
+
+        <h1 class="title-text">Application for a Merchant Facility - NOT FLAT RATE.</h1>
+
+      </div>
+
+
+      <form class="item" id="form" action="https://demo.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=963864ea-9fde-4243-bcd1-380c5747876a&env=demo&acct=38dc928a-8528-4368-ba2b-d9d980c9a213&v=2" method="POST">
+
+
+  <div class="box">
+
+  <div class="form-group">
+            <label>What product are you applying for?</label>
+            <input type="text" class="form-control" name="product" value="EFTPOS">
+          </div>
+
+          <div class="title-form">
+            <h5>Business Details:</h5>
+          </div>
+
+          <div class="form-group">
+            <label>Merchant Trading Name:</label>
+            <input type="text" class="form-control" name="merchantName">
+          </div>
+
+
+          <div class="form-group">
+            <label>Legal Entity Name:</label>
+            <input type="text" class="form-control" name="entityName" value="">
+          </div>
+
+          <div class="form-group">
+            <label>Name to Appear on Receipt:</label>
+            <input type="text" class="form-control" name="nameOnReceipt" value="">
+            <small class="form-text text-muted">(Max 22 Characters. Must be abbreviation of Merchant Trading Name or name above the door)</small>
+
+          </div>
+          <hr>
+          <div class="">
+            <h6>Registered Business Details (“trading as xxxxxx”)
+            </h6>
+          </div>
+
+          <div class="form-group">
+            <label>Is the Business Name Registered?</label>
+            <select class="form-control" name="businessNameRegisteredQ">
+              <option>-</option>
+              <option>Yes- Fillout below</option>
+              <option>No - Complete Legal Entity Details</option>
+            </select>
+            <small class="form-text text-muted">(tap and select)</small>
+          </div>
+
+
+          <div class="form-group">
+            <label>Full Registered Business Name:</label>
+            <input type="text" class="form-control" name="businessName" value="">
+            <small class="form-text text-muted">(as per the registered business name that appears on the ASIC & Business Name Search)</small>
+          </div>
+
+          <div class="form-group">
+            <label>ABN:</label>
+            <input type="number" class="form-control" name="abn" value="">
+          </div>
+
+          <div class="form-group">
+            <label>Principle Place of Business Address:</label>
+            <input type="text" class="form-control" name="principlePlaceAddress" value="">
+          </div>
+
+          <div class="form-group">
+            <label>Suburb:</label>
+            <input type="text" class="form-control" name="suburb" value="">
+          </div>
+
+          <div class="form-group">
+            <label>State:</label>
+            <select class="form-control" name="state">
+              <option>-</option>
+              <option>NSW</option>
+              <option>VIC</option>
+              <option>QLD</option>
+              <option>WA</option>
+              <option>SA</option>
+              <option>TAS</option>
+              <option>ACT</option>
+              <option>NT</option>
+            </select>
+          </div>
+
+
+          <div class="form-group">
+            <label>Postcode:</label>
+            <input type="number" class="form-control" name="postcode" value="">
+          </div>
+
+          <hr>
+
+          <div class="">
+            <h6>Legal Entity Details: (select and complete the details for the legal entity type applicable to your
+              business)</h6>
+          </div>
+
+
+          <div class="form-group">
+            <label>Legal Entity Type:</label>
+            <select class="form-control" name="legalEntityName">
+              <option>-</option>
+              <option>Sole Trader</option>
+              <option>Company</option>
+              <option>Partnership</option>
+              <option>Trust</option>
+              <option>Incorporated Association</option>
+              <option>Registered Co-operative</option>
+              <option>Unincorporated Association or Body Corporate</option>
+            </select>
+          </div>
+
+
+          <div class="form-group">
+            <label>Registered Office Address:</label>
+            <input type="text" class="form-control" name="registeredOfficeAddress" value="">
+          </div>
+
+          <div class="form-group">
+            <label>Suburb:</label>
+            <input type="text" class="form-control" name="legalSuburb" value="">
+          </div>
+
+
+          <div class="form-group">
+            <label>State:</label>
+            <select class="form-control" name="legalState">
+              <option>-</option>
+              <option>NSW</option>
+              <option>VIC</option>
+              <option>QLD</option>
+              <option>WA</option>
+              <option>SA</option>
+              <option>TAS</option>
+              <option>ACT</option>
+              <option>NT</option>
+            </select>
+          </div>
+
+
+
+          <div class="form-group">
+            <label>Postcode:</label>
+            <input type="number" class="form-control" name="legalPostcode" value="">
+          </div>
+
+
+          <div class="form-group">
+            <label>Full Company Name:</label>
+            <input type="text" class="form-control" name="fullCompanyName" value="">
+          </div>
+
+
+          <div class="form-group">
+            <label>ACN:</label>
+            <input type="number" class="form-control" name="acn" value="">
+          </div>
+
+
+          <div class="form-group">
+            <label>Trust Name:</label>
+            <input type="text" class="form-control" name="trustName" value="">
+          </div>
+
+
+
+          <div class="form-group">
+            <label>Merchant Category Code (MCC):</label>
+            <select class="form-control" name="mcc">
+              <option>-</option>
+              <option>0742 - LOW - VETERINARY SERVICES</option>
+              <option>0763 - LOW - AGRICULTURAL CO-OPERATIVES</option>
+              <option>0780 - LOW - LANDSCAPE/HORTICULTURAL SERVICES</option>
+              <option>1520 - LOW - GENERAL CONTRACTORS RESIDENTIAL/COMMERCIAL</option>
+              <option>1711 - LOW - HEATING/PLUMBING AND AIR CONDITIONING CONTRACTORS</option>
+              <option>1731 - LOW - ELECTRICAL CONTRACTORS</option>
+              <option>1740 - LOW - MASONRY/TILE/PLASTER/INSULATION CONTRACTORS</option>
+              <option>1750 - LOW - CARPENTRY CONTRACTORS</option>
+              <option>1761 - LOW - ROOFING/SIDING/SHEET METAL CONTRACTORS</option>
+              <option>1771 - HIGH - CONTRACTORS - CONCRETE</option>
+              <option>1799 - LOW - CONTRACTORS-SPECIAL TRADE - (NOT CLASSIFIED ELSEWHERE)</option>
+              <option>2741 - UNACCEPTABLE - MISCELLANEOUS PUBLISHING & PRINTING</option>
+            </select>
+          </div>
+
+
+          <div class="text-center">
+            <button class="btn btn-success btn-lg" type="submit"   name="button" onclick="$('form').attr('target', '_blank')" >Submit</button>
+<!--
+      <button class="btn btn-success btn-lg" type="submit" formaction="https://hooks.zapier.com/hooks/catch/14888944/33njn26/"   onclick="$('form').attr('target', '_blank')">BUTTON 2</button> -->
+      <!-- formaction="https://demo.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=963864ea-9fde-4243-bcd1-380c5747876a&env=demo&acct=38dc928a-8528-4368-ba2b-d9d980c9a213&v=2"
+
+         -->
+
+
+          </div>
+
+
+
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+
+<!-- JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <script src="app.js"></script>
+
+
+</body>
+
+</html>
