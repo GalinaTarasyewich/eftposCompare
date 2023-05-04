@@ -1,0 +1,109 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #285430;
+  padding: 0 1%;
+
+}
+
+
+body {
+  background-color: #EDF9EB;
+}
+
+.title {
+text-align: center;
+}
+
+.item {
+
+  min-height: 70px;
+  align-items: center;
+
+}
+
+
+.box {
+  max-width: 70%;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+
+.form-group{
+  padding: 10px;
+}
+
+p{
+  padding: 0 1%;
+
+}
+
+
+.title-form{
+  padding: 2% 0 0.5% 0;
+}
+
+.subtitle-form h6{
+    background-color: #68B984;
+    color: white;
+    padding: 0 1%;
+}
+
+.title-form h5 {
+  background-color: #1E5631;
+  color: white;
+  padding: 0 1%;
+
+}
+.title-form p{
+  background-color: #1E5631;
+  color: white;
+  padding: 0 1%;
+
+}
+
+
+
+.eftpos-logo {
+width: 25%;
+padding-bottom: 60px;
+padding-top: 15px;
+}
+
+.dark-part{
+  background-color: #285430;
+  padding: 0 70px;
+}
+
+.dark-part h1 {
+  color: #EDF9EB;
+  padding: 0 1%;
+
+}
+
+.title-landing{
+  padding-bottom: 7px;
+}
+
+
+
+
+.application-card{
+padding: 5% 3%;
+}
+
+.rate{
+  width: 30%;
+}
+
+.accordion-button{
+background-color: #EDF9EB;
+color: #285430;
+}
+
+.card-body{
+  background-color: #EDF9EB;
+}
