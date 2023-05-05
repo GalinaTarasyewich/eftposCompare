@@ -65,7 +65,7 @@
             <div class="invalid-feedback">Select an option from the dropdown menu</div>
           </div>
 
-          <div class="accordion">
+          <div class="accordion" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -1240,8 +1240,9 @@
                     <label>How long has business been established and registered for GST?</label>
                     <select class="form-control" name="howLongEstablished" required>
                       <option value="">-</option>
-                      <option value="Business has been established and GST registered for >2 years">Business has been established and GST registered for >2 years</option>
-                      <option value="New owners of an existing business that has been established for >2 years and  is currently registered for GST">New owners of an existing business that has been established for >2 years and is currently registered
+                      <option value="Business has been established and GST registered for &gt2 years">Business has been established and GST registered for >2 years</option>
+                      <option value="New owners of an existing business that has been established for &gt2 years and  is currently registered for GST">New owners of an existing business that has been established for >2 years and is currently
+                        registered
                         for GST
                       </option>
                       <option value="All other businesses including 'greenfield'/start-up businesses with a registered ABN">All other businesses including 'greenfield'/start-up businesses with a registered ABN</option>
@@ -1272,7 +1273,6 @@
                 </div>
               </div>
             </div>
-
 
 
             <div class="accordion-item">
@@ -1406,7 +1406,935 @@
               </div>
             </div>
 
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEight">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  Integrated POS
+                </button>
+              </h2>
+              <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
 
+                  <div class="title-form ">
+                    <h5>Integrated POS</h5>
+                  </div>
+
+
+                  <div class="subtitle-form ">
+                    <h6>Integrated Terminal Requirements</h6>
+                  </div>
+                  <hr>
+                  <p><strong>Terminal Rental Fee per Terminal and Terminal requirements</strong></p>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <label><strong>How many terminal(s) are needed?</strong></label>
+                      <div class="col">
+                        <label>Countertop Integrated Terminals <br> (Broadband Communications):</label>
+                        <input type="number" class="form-control" name="countertopTerminal">
+
+                      </div>
+                      <div class="col">
+                        <label>Mobile Integrated- Broadband Comms <br> (Traditional On Premise POS):</label>
+                        <input type="number" class="form-control " name="mobileTerminal">
+                      </div>
+                      <div class="col">
+                        <label>Mobile Integrated-WIFI Comms <br> (Cloud Based POS):</label>
+                        <input type="number" class="form-control" name="mobileWifiTerminal" value="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group ">
+                    <label>Template Type:</label>
+                    <select class="form-control" name="templateTypeIntegrated" required>
+                      <option value="">-</option>
+                      <option value="N/A">N/A</option>
+                      <option value="Integrated POS">Integrated POS</option>
+                      <option value="Integrated POS Restaurant">Integrated POS Restaurant</option>
+                      <option value="Integrated POS Hospitality">Integrated POS Hospitality</option>
+                      <option value="Integrated POS MOTO">Integrated POS MOTO</option>
+                      <option value="Integrated POS Restaurant MOTO">Integrated POS Restaurant MOTO</option>
+                      <option value="Integrated POS Hospitality MOTO">Integrated POS Hospitality MOTO</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                    <small>Choose N/A if applying for EFTPOS.</small>
+                  </div>
+
+                  <div class="form-group ">
+                    <label>Software Package:</label>
+                    <select class="form-control" name="softwarePackageIntegrated" required>
+                      <option value="">-</option>
+                      <option value="N/A">N/A</option>
+                      <option value="Suncorp Only">Suncorp Only</option>
+                      <option value="Sun + Loy">Sun + Loy</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                    <small>Choose N/A if applying for EFTPOS.</small>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>Software Vendor Name:</label>
+                    <input type="text" class="form-control" name="softwareVendor" value="" required>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                    <small>Type N/A if applying for EFTPOS.</small>
+                  </div>
+
+
+                  <div class="form-group ">
+                    <label>Use existing Linkly user name and password?</label>
+                    <select class="form-control" name="existingLinklyUser" required>
+                      <option value="">-</option>
+                      <option value="N/A">N/A</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                    <div class="invalid-feedback">Please fill out this field </div>
+                    <small>Choose N/A if applying for EFTPOS.</small>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Existing TID -Terminal Identification Number:</label>
+                    <input type="text" class="form-control" name="existingTID" pattern=".{8}" value="">
+                    <div class="invalid-feedback">Input must be exactly 8 characters in length</div>
+
+                  </div>
+
+                  <div class="form-group">
+                    <label>Number of swivel bases required:</label>
+                    <input type="text" class="form-control" name="numberOfSwivel" pattern="[a-zA-Z]*" value="">
+                    <div class="invalid-feedback">Please enter a valid input containing only letters e.g. ONE</div>
+                  </div>
+
+
+
+                  <div class="subtitle-form ">
+                    <h6>Car Charger</h6>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Number of Car Charger(s) required?</label>
+                    <input type="text" class="form-control" name="numberCarChargers" pattern="[0-9]*" value="">
+                    <div class="invalid-feedback">Please enter a valid input containing only numbers</div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNine">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                  Financial Data and Fees
+                </button>
+              </h2>
+              <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                  <div class="subtitle-form ">
+                    <h6>Financial Data and Fees:</h6>
+                  </div>
+                  <hr>
+                  <p><strong>Refund limit and count:</strong></p>
+
+
+                  <div class="form-group">
+                    <label>Refund $ limit: (per transaction)</label>
+                    <br>
+                    <small><small>If not required, input must be 0. <br>
+                        Determine the refund limit by multiplying the average transaction by 1.5 <br>
+                        Any refund values greater than $250 (inc Medicare) will require DCA approval and further justification may be required from the approver.</small></small>
+                    <input type="text" class="form-control" name="refundLimit" onfocus="if(this.value=='') this.value = '$';" pattern="^\$[0-9]+$" value="" required>
+                    <div class="invalid-feedback">Please enter a valid input starting with Dollar Sign ($) and following by numbers</div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Reason:</label>
+                    <small><small>(Please provide justification if refund amount limit is greater than $250)</small></small>
+                    <input type="text" class="form-control" name="reasonRefund" value="">
+                  </div>
+
+                  <div class="form-group">
+                    <label>Refund count limit: (# of refund transactions per day)</label>
+                    <br>
+                    <small><small>If not required, input must be 0.</small></small>
+                    <input type="text" class="form-control" name="numberRefundTransactions" pattern="[0-9]*" value="" required>
+                    <div class="invalid-feedback">Please enter a valid input containing only numbers</div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Reason:</label>
+                    <small><small>(Please provide justification if refund count limit is greater than 5)</small></small>
+                    <input type="text" class="form-control" name="reasonNumberRefundTransactions" value="">
+                  </div>
+
+                  <hr>
+                  <p><strong>Average Annual Figures</strong></p>
+
+                  <div class="form-group">
+                    <label>Proposed Card Turnover (annual):</label>
+                    <input type="text" class="form-control" name="cardTurnover" onfocus="if(this.value=='') this.value = '$';" pattern="^\$[0-9]+$" value="" required>
+                    <div class="invalid-feedback">Please enter a valid input starting with Dollar Sign ($) and following by numbers</div>
+                  </div>
+
+                  <hr>
+                  <p><strong>Merchant Pricing</strong></p>
+
+                  <div class="form-group">
+                    <label>Promotion Code:</label>
+                    <input type="text" class="form-control" name="promotionCode" value="">
+                    <small>If applicable, provide promotion code or ALNA Member Number.</small>
+                  </div>
+
+                  <div class="form-group ">
+                    <label>Pricing</label>
+                    <select id="pricing" class="form-control pricingHighRisk" name="pricing" onchange="showPricing()" required>
+                      <option value="">--Please choose an option--</option>
+                      <option value="Flat Rate Offer">Flat Rate Offer</option>
+                      <option value="Pricing approved by Product">Pricing approved by Product</option>
+                      <option value="Auto Parts Stores">Auto Parts Stores</option>
+                      <option value="Bakeries">Bakeries</option>
+                      <option value="Butchers">Butchers</option>
+                      <option value="Hairdressers and Beauticians">Hairdressers and Beauticians</option>
+                      <option value="Liquor Stores">Liquor Stores</option>
+                      <option value="Mechanics">Mechanics</option>
+                      <option value="Petrol Stations">Petrol Stations</option>
+                      <option value="Pharmacy">Pharmacy</option>
+                      <option value="Supermarkets (Buying group members)">Supermarkets (Buying group members)</option>
+                      <option value="Tobacconist">Tobacconist</option>
+                      <option value="Tyre Stores">Tyre Stores</option>
+                    </select>
+                  </div>
+
+                  <div class="title-form">
+                    <h5>Fees (All fees and charges are exclusive of GST)</h5>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Merchant Service Fee (as a % of Credit Card transaction value, charged at the end of each calendar month):</label>
+                    <input id="merchantServiceFee" type="text" class="form-control" name="merchantServiceFee" value="">
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>Debit Card Transaction Fee (per Debit Card transaction, charged at the end of each calendar month):</label>
+                    <input id="debitCardFee" type="text" class="form-control" name="debitCardFee" value="">
+                  </div>
+
+
+                  <div class="form-group commentsHide">
+                    <label>High Risk Comments</label>
+                    <select class="form-control" name="highRiskComments">
+                      <option value="">-</option>
+                      <option value="Merchants accepts payment at completion of work.">Merchants accepts payment at completion of work.</option>
+                    </select>
+                    <small>Choose "Merchants accepts payment at completion of work." to proceed with application.</small>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                  Personal Details (Business Owners/Directors)
+                </button>
+              </h2>
+              <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                  <div class="title-form">
+                    <h5>Personal Details (Business Owners/Directors)</h5>
+                  </div>
+
+                  <p>Please capture all applicants (Sole Traders, Partners, Directors, Trustees, Members of an Association, Business Owners and Committee Members) details below. All Business Owners/Directors shall be provided Full Access to the
+                    Merchant
+                    Facility including the ability to perform refunds, access and change the refund password, access information about the merchant facility, request changes and terminate the Merchant Facility.</p>
+                  <p><strong>If you’re a company, a minimum of 2 Directors or any 1 Director and Company Secretary must sign. All partners of a partnership must sign</strong></p>
+
+                  <div class="form-group">
+                    <label>How many people are signing this form?</label>
+                    <select class="form-control howManyDirectors" name="howManyDirectors" required>
+                      <option value="">-</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </div>
+
+
+                  <hr>
+                  <!-- Business Owner Number 1 -->
+                  <p><strong>Business Owner/ Director 1</strong></p>
+
+
+                  <div class="form-group">
+                    <label>Full Name:</label>
+                    <input type="text" class="form-control" name="director1Name" value="" required>
+                    <div class="invalid-feedback">Please fill out this field</div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Position:</label>
+                    <input type="text" class="form-control" name="director1Position" value="" required>
+                    <div class="invalid-feedback">Please fill out this field</div>
+                  </div>
+
+
+
+                  <div class="form-group">
+                    <label>Date of Birth:</label>
+                    <input type="text" pattern="(0[1-9]|[1-2][0-9]|3[01])/(0[1-9]|1[0-2])/([0-9]{4})" placeholder="DD/MM/YYYY" class="form-control" name="director1DOB" value="" required>
+                    <div class="invalid-feedback">Please enter DOB in the format DD/MM/YYYY (e.g. 24/06/1990)</div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Email address:</label>
+                    <input type="email" class="form-control" placeholder="example@domain.com" name="director1Email" value="" required>
+                    <div class="invalid-feedback">Please enter a valid email in the format example@domain.com</div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <h6>Residential Address</h6>
+
+                    <div class="form-group">
+                      <label>C/o or Building</label>
+                      <input type="text" class="form-control" name="director1Building" value="">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Street No. & Name</label>
+                      <input type="text" class="form-control" name="director1Street" value="" required>
+                      <div class="invalid-feedback">Please fill out this field </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Suburb/Town</label>
+                      <input type="text" class="form-control" name="director1Suburb" value="" required>
+                      <div class="invalid-feedback">Please fill out this field </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>State:</label>
+                      <select class="form-control" name="director1State" required>
+                        <option value="">-</option>
+                        <option value="NSW">NSW</option>
+                        <option value="VIC">VIC</option>
+                        <option value="QLD">QLD</option>
+                        <option value="WA">WA</option>
+                        <option value="SA">SA</option>
+                        <option value="TAS">TAS</option>
+                        <option value="ACT">ACT</option>
+                        <option value="NT">NT</option>
+                      </select>
+                      <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Postcode:</label>
+                      <input type="text" pattern="\d{4}" class="form-control" name="director1Postcode" value="" required>
+                      <div class="invalid-feedback">Please enter exactly 4 digits</div>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group ">
+                    <label>Is the Postal address different from Residential Address?</label>
+                    <select class="form-control director1PostalAddress" name="director1postalAddressDif" required>
+                      <option value="">-</option>
+                      <option value="Yes">Yes, different.</option>
+                      <option value="No">No, the same.</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                  </div>
+
+
+                  <div class="form-group director1PostalHide">
+                    <h6>Postal Address</h6>
+
+                    <div class="form-group">
+                      <label>C/o or Building</label>
+                      <input type="text" class="form-control" name="director1BuildingPostal" value="">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Street No. & Name</label>
+                      <input type="text" class="form-control" name="director1StreetPostal" value="">
+                      <div class="invalid-feedback">Please fill out this field </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Suburb/Town</label>
+                      <input type="text" class="form-control" name="director1SuburbPostal" value="">
+                      <div class="invalid-feedback">Please fill out this field </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>State:</label>
+                      <select class="form-control" name="director1StatePostal">
+                        <option value="">-</option>
+                        <option value="NSW">NSW</option>
+                        <option value="VIC">VIC</option>
+                        <option value="QLD">QLD</option>
+                        <option value="WA">WA</option>
+                        <option value="SA">SA</option>
+                        <option value="TAS">TAS</option>
+                        <option value="ACT">ACT</option>
+                        <option value="NT">NT</option>
+                      </select>
+                      <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                    </div>
+                    <div class="form-group">
+                      <label>Postcode:</label>
+                      <input type="text" pattern="\d{4}" class="form-control" name="director1PostcodePostal" value="">
+                      <div class="invalid-feedback">Please enter exactly 4 digits</div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <label>Phone (Work):</label>
+                        <input type="text" class="form-control" name="director1PhoneWork" pattern=".{10}" value="" placeholder="Phone (Work)" required>
+                        <div class="invalid-feedback">Phone number must 10 characters</div>
+                      </div>
+                      <div class="col">
+                        <label>Phone (Home):</label>
+                        <input type="text" class="form-control" name="director1PhoneHome" pattern=".{10}" value="" placeholder="Phone (Home)">
+                        <div class="invalid-feedback">Phone number must 10 characters</div>
+                      </div>
+                      <div class="col">
+                        <label>Mobile:</label>
+                        <input type="text" class="form-control" name="director1Mobile" pattern=".{10}" pattern=".{10}" value="" placeholder="Mobile">
+                        <div class="invalid-feedback">Phone number must 10 characters</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <!-- Business Owner Number 2 -->
+
+                  <p><strong>Business Owner/ Director 2</strong></p>
+
+
+                  <div class="form-group">
+                    <label>Full Name:</label>
+                    <br>
+                    <small><small>Put N/A if not applicable</small></small>
+                    <input type="text" class="form-control" name="director2Name" value="" required>
+                    <div class="invalid-feedback">Please fill out this field</div>
+                  </div>
+
+                  <div class="form-group director2Hide">
+
+                    <div class="form-group">
+                      <label>Position:</label>
+                      <input type="text" class="form-control" name="director2Position" value="">
+                      <div class="invalid-feedback">Please fill out this field</div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                      <label>Date of Birth:</label>
+                      <input type="text" pattern="(0[1-9]|[1-2][0-9]|3[01])/(0[1-9]|1[0-2])/([0-9]{4})" placeholder="DD/MM/YYYY" class="form-control" name="director2DOB" value="">
+                      <div class="invalid-feedback">Please enter DOB in the format DD/MM/YYYY (e.g. 24/06/1990)</div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Email address:</label>
+                      <input type="email" class="form-control" placeholder="example@domain.com" name="director2Email" value="">
+                      <div class="invalid-feedback">Please enter a valid email in the format example@domain.com</div>
+                    </div>
+
+
+                    <div class="form-group">
+                      <h6>Residential Address</h6>
+
+                      <div class="form-group">
+                        <label>C/o or Building</label>
+                        <input type="text" class="form-control" name="director2Building" value="">
+                      </div>
+
+                      <div class="form-group">
+                        <label>Street No. & Name</label>
+                        <input type="text" class="form-control" name="director2Street" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Suburb/Town</label>
+                        <input type="text" class="form-control" name="director2Suburb" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>State:</label>
+                        <select class="form-control" name="director2State">
+                          <option value="">-</option>
+                          <option value="NSW">NSW</option>
+                          <option value="VIC">VIC</option>
+                          <option value="QLD">QLD</option>
+                          <option value="WA">WA</option>
+                          <option value="SA">SA</option>
+                          <option value="TAS">TAS</option>
+                          <option value="ACT">ACT</option>
+                          <option value="NT">NT</option>
+                        </select>
+                        <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Postcode:</label>
+                        <input type="text" pattern="\d{4}" class="form-control" name="director2Postcode" value="">
+                        <div class="invalid-feedback">Please enter exactly 4 digits</div>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group ">
+                      <label>Is the Postal address different from Residential Address?</label>
+                      <select class="form-control director2PostalAddress" name="director2postalAddressDif">
+                        <option value="">-</option>
+                        <option value="Yes">Yes, different.</option>
+                        <option value="No">No, the same.</option>
+                      </select>
+                    </div>
+
+
+                    <div class="form-group director2PostalHide">
+                      <h6>Postal Address</h6>
+
+                      <div class="form-group">
+                        <label>C/o or Building</label>
+                        <input type="text" class="form-control" name="director2BuildingPostal" value="">
+                      </div>
+
+                      <div class="form-group">
+                        <label>Street No. & Name</label>
+                        <input type="text" class="form-control" name="director2StreetPostal" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Street No. & Name</label>
+                        <input type="text" class="form-control" name="director2StreetPostal" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Suburb/Town</label>
+                        <input type="text" class="form-control" name="director2SuburbPostal" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>State:</label>
+                        <select class="form-control" name="director2StatePostal">
+                          <option value="">-</option>
+                          <option value="NSW">NSW</option>
+                          <option value="VIC">VIC</option>
+                          <option value="QLD">QLD</option>
+                          <option value="WA">WA</option>
+                          <option value="SA">SA</option>
+                          <option value="TAS">TAS</option>
+                          <option value="ACT">ACT</option>
+                          <option value="NT">NT</option>
+                        </select>
+                        <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Postcode:</label>
+                        <input type="text" class="form-control" pattern="\d{4}" name="director2PostcodePostal" value="">
+                        <div class="invalid-feedback">Please enter exactly 4 digits</div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col">
+                          <label>Phone (Work):</label>
+                          <input type="text" class="form-control" name="director2PhoneWork" pattern=".{10}" value="" placeholder="Phone (Work)">
+                          <div class="invalid-feedback">Phone number must 10 characters</div>
+                        </div>
+                        <div class="col">
+                          <label>Phone (Home):</label>
+                          <input type="text" class="form-control" name="director2PhoneHome" value="" placeholder="Phone (Home)">
+                          <div class="invalid-feedback">Phone number must 10 characters</div>
+                        </div>
+                        <div class="col">
+                          <label>Mobile:</label>
+                          <input type="text" class="form-control" name="director2Mobile" pattern=".{10}" value="" placeholder="Mobile">
+                          <div class="invalid-feedback">Phone number must 10 characters</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+
+
+                  <!-- Business Owner Number 3 -->
+
+                  <p><strong>Business Owner/ Director 3</strong></p>
+
+
+                  <div class="form-group">
+                    <label>Full Name:</label>
+                    <br>
+                    <small><small>Put N/A if not applicable</small></small>
+                    <input type="text" class="form-control" name="director3Name" value="" required>
+                    <div class="invalid-feedback">Please fill out this field</div>
+                  </div>
+
+                  <div class="form-group director3Hide">
+                    <div class="form-group">
+                      <label>Position:</label>
+                      <input type="text" class="form-control" name="director3Position" value="">
+                      <div class="invalid-feedback">Please fill out this field</div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                      <label>Date of Birth:</label>
+                      <input type="text" pattern="(0[1-9]|[1-2][0-9]|3[01])/(0[1-9]|1[0-2])/([0-9]{4})" placeholder="DD/MM/YYYY" class="form-control" name="director3DOB" value="">
+                      <div class="invalid-feedback">Please enter DOB in the format DD/MM/YYYY (e.g. 24/06/1990)</div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Email address:</label>
+                      <input type="email" class="form-control" placeholder="example@domain.com" name="director3Email" value="">
+                      <div class="invalid-feedback">Please enter a valid email in the format example@domain.com</div>
+                    </div>
+
+
+                    <div class="form-group">
+                      <h6>Residential Address</h6>
+
+                      <div class="form-group">
+                        <label>C/o or Building</label>
+                        <input type="text" class="form-control" name="director3Building" value="">
+
+                      </div>
+
+                      <div class="form-group">
+                        <label>Street No. & Name</label>
+                        <input type="text" class="form-control" name="director3Street" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Suburb/Town</label>
+                        <input type="text" class="form-control" name="director3Suburb" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+
+                      </div>
+
+
+                      <div class="form-group">
+                        <label>State:</label>
+                        <select class="form-control" name="director3State">
+                          <option value="">-</option>
+                          <option value="NSW">NSW</option>
+                          <option value="VIC">VIC</option>
+                          <option value="QLD">QLD</option>
+                          <option value="WA">WA</option>
+                          <option value="SA">SA</option>
+                          <option value="TAS">TAS</option>
+                          <option value="ACT">ACT</option>
+                          <option value="NT">NT</option>
+                        </select>
+                        <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Postcode:</label>
+                        <input type="text" class="form-control" pattern="\d{4}" name="director3Postcode" value="">
+                        <div class="invalid-feedback">Please enter exactly 4 digits</div>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group ">
+                      <label>Is the Postal address different from Residential Address?</label>
+                      <select class="form-control director3PostalAddress" name="director3postalAddressDif">
+                        <option value="">-</option>
+                        <option value="Yes">Yes, different.</option>
+                        <option value="No">No, the same.</option>
+                      </select>
+                      <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                    </div>
+
+
+                    <div class="form-group director3PostalHide">
+                      <h6>Postal Address</h6>
+
+                      <div class="form-group">
+                        <label>C/o or Building</label>
+                        <input type="text" class="form-control" name="director3BuildingPostal" value="">
+
+                      </div>
+
+                      <div class="form-group">
+                        <label>Street No. & Name</label>
+                        <input type="text" class="form-control" name="director3StreetPostal" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Suburb/Town</label>
+                        <input type="text" class="form-control" name="director3SuburbPostal" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>State:</label>
+                        <select class="form-control" name="director3StatePostal">
+                          <option value="">-</option>
+                          <option value="NSW">NSW</option>
+                          <option value="VIC">VIC</option>
+                          <option value="QLD">QLD</option>
+                          <option value="WA">WA</option>
+                          <option value="SA">SA</option>
+                          <option value="TAS">TAS</option>
+                          <option value="ACT">ACT</option>
+                          <option value="NT">NT</option>
+                        </select>
+                        <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Postcode:</label>
+                        <input type="text" pattern="\d{4}" class="form-control" name="director3PostcodePostal" value="">
+                        <div class="invalid-feedback">Please enter exactly 4 digits</div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col">
+                          <label>Phone (Work):</label>
+                          <input type="text" class="form-control" name="director3PhoneWork" pattern=".{10}" value="" placeholder="Phone (Work)">
+                          <div class="invalid-feedback">Phone number must 10 characters</div>
+                        </div>
+                        <div class="col">
+                          <label>Phone (Home):</label>
+                          <input type="text" class="form-control" name="director3PhoneHome" value="" pattern=".{10}" placeholder="Phone (Home)">
+                          <div class="invalid-feedback">Phone number must 10 characters</div>
+                        </div>
+                        <div class="col">
+                          <label>Mobile:</label>
+                          <input type="text" class="form-control" name="director3Mobile" pattern=".{10}" value="" placeholder="Mobile">
+                          <div class="invalid-feedback">Phone number must 10 characters</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <!-- Business Owner Number 4 -->
+
+                  <p><strong>Business Owner/ Director 4</strong></p>
+
+
+                  <div class="form-group">
+                    <label>Full Name:</label>
+                    <br>
+                    <small><small>Put N/A if not applicable</small></small>
+                    <input type="text" class="form-control" name="director4Name" value="" required>
+                    <div class="invalid-feedback">Please fill out this field</div>
+                  </div>
+
+                  <div class="form-group director4Hide">
+
+
+
+                    <div class="form-group ">
+                      <label>Position:</label>
+                      <input type="text" class="form-control" name="director4Position" value="">
+                      <div class="invalid-feedback">Please fill out this field</div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                      <label>Date of Birth:</label>
+                      <input type="text" pattern="(0[1-9]|[1-2][0-9]|3[01])/(0[1-9]|1[0-2])/([0-9]{4})" placeholder="DD/MM/YYYY" class="form-control" name="director4DOB" value="">
+                      <div class="invalid-feedback">Please enter DOB in the format DD/MM/YYYY (e.g. 24/06/1990)</div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Email address:</label>
+                      <input type="email" class="form-control" placeholder="example@domain.com" name="director4Email" value="">
+                      <div class="invalid-feedback">Please enter a valid email in the format example@domain.com</div>
+                    </div>
+
+
+                    <div class="form-group">
+                      <h6>Residential Address</h6>
+
+                      <div class="form-group">
+                        <label>C/o or Building</label>
+                        <input type="text" class="form-control" name="director4Building" value="">
+                      </div>
+
+                      <div class="form-group">
+                        <label>Street No. & Name</label>
+                        <input type="text" class="form-control" name="director4Street" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Suburb/Town</label>
+                        <input type="text" class="form-control" name="director4Suburb" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>State:</label>
+                        <select class="form-control" name="director4State">
+                          <option value="">-</option>
+                          <option value="NSW">NSW</option>
+                          <option value="VIC">VIC</option>
+                          <option value="QLD">QLD</option>
+                          <option value="WA">WA</option>
+                          <option value="SA">SA</option>
+                          <option value="TAS">TAS</option>
+                          <option value="ACT">ACT</option>
+                          <option value="NT">NT</option>
+                        </select>
+                        <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Postcode:</label>
+                        <input type="text" pattern="\d{4}" class="form-control" name="director4Postcode" value="">
+                        <div class="invalid-feedback">Please enter exactly 4 digits</div>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group ">
+                      <label>Is the Postal address different from Residential Address?</label>
+                      <select class="form-control director4PostalAddress" name="director4postalAddressDif">
+                        <option value="">-</option>
+                        <option value="Yes">Yes, different.</option>
+                        <option value="No">No, the same.</option>
+                      </select>
+                      <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                    </div>
+
+
+                    <div class="form-group director4PostalHide">
+                      <h6>Postal Address</h6>
+
+                      <div class="form-group">
+                        <label>C/o or Building</label>
+                        <input type="text" class="form-control" name="director4BuildingPostal" value="">
+                      </div>
+
+                      <div class="form-group">
+                        <label>Street No. & Name</label>
+                        <input type="text" class="form-control" name="director4StreetPostal" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Suburb/Town</label>
+                        <input type="text" class="form-control" name="director4SuburbPostal" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>State:</label>
+                        <select class="form-control" name="director4StatePostal">
+                          <option value="">-</option>
+                          <option value="NSW">NSW</option>
+                          <option value="VIC">VIC</option>
+                          <option value="QLD">QLD</option>
+                          <option value="WA">WA</option>
+                          <option value="SA">SA</option>
+                          <option value="TAS">TAS</option>
+                          <option value="ACT">ACT</option>
+                          <option value="NT">NT</option>
+                        </select>
+                        <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Postcode:</label>
+                        <input type="text" pattern="\d{4}" class="form-control" name="director4PostcodePostal" value="">
+                        <div class="invalid-feedback">Please enter exactly 4 digits</div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col">
+                          <label>Phone (Work):</label>
+                          <input type="text" class="form-control" name="director4PhoneWork" pattern=".{10}" value="" placeholder="Phone (Work)">
+                          <div class="invalid-feedback">Phone number must 10 characters</div>
+                        </div>
+                        <div class="col">
+                          <label>Phone (Home):</label>
+                          <input type="text" class="form-control" pattern=".{10}" name="director4PhoneHome" value="" placeholder="Phone (Home)">
+                          <div class="invalid-feedback">Phone number must 10 characters</div>
+                        </div>
+                        <div class="col">
+                          <label>Mobile:</label>
+                          <input type="text" class="form-control" name="director4Mobile" pattern=".{10}" value="" placeholder="Mobile">
+                          <div class="invalid-feedback">Phone number must 10 characters</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEleven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                  Sales Consultant Details
+                </button>
+              </h2>
+              <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                  <div class="form-group">
+                    <label><strong>Sales Consultant Comments:</strong></label>
+                    <br>
+                    <small>Add comments you have about the application</small>
+                    <input id="comments1" type="text" class="form-control" placeholder="Comment here..." name="commentsLine1" value="">
+                    <input type="text" class="form-control" placeholder="Comment here..." name="commentsLine2" value="">
+                    <input type="text" class="form-control" placeholder="Comment here..." name="commentsLine3" value="">
+                  </div>
+
+                  <div class="form-group">
+                    <label>Application Completed by:</label>
+                    <input type="text" class="form-control" name="completedBy" value="EFTPOS Compare">
+                  </div>
+
+                  <div class="form-group">
+                    <label>Suncorp Contact:</label>
+                    <br>
+                    <small><small>Sales Agent Name</small></small>
+                    <input type="text" class="form-control" name="agentName" required autocomplete="true">
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
 
 
 
@@ -1414,7 +2342,7 @@
 
           </div>
           <div class="text-center">
-            <button class="btn btn-success btn-lg" type="submit" name="button" onclick="$('form').attr('target')">Submit</button>
+            <button class="btn btn-success btn-lg" type="submit" name="button" onclick="$('form').attr('target', '_blank')">Submit</button>
             <!--
       <button class="btn btn-success btn-lg" type="submit" formaction="https://hooks.zapier.com/hooks/catch/14888944/33njn26/"   onclick="$('form').attr('target', '_blank')">BUTTON 2</button> -->
             <!-- formaction="https://demo.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=963864ea-9fde-4243-bcd1-380c5747876a&env=demo&acct=38dc928a-8528-4368-ba2b-d9d980c9a213&v=2"
