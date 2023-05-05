@@ -151,8 +151,8 @@ function showPricing() {
       debitCardFee.value = "0.88%";
       break;
     case "Pricing approved by Product":
-      merchantServiceFee.value = "0.82%";
-      debitCardFee.value = "0.82%";
+      merchantServiceFee.value = "";
+      debitCardFee.value = "";
       comments1.value = "RATES ARE INDUSTRY APPROVED"
       break;
     case "Auto Parts Stores":
