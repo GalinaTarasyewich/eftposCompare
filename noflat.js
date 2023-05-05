@@ -248,7 +248,7 @@ function showPricing() {
   }
 }
 
-
+                    // EFTPOS RENTAL FEES
 // Get the required elements
 const eftposTerminalInputs = document.querySelectorAll('.eftposTerminal');
 const pricingSelect = document.querySelector('#pricing');
@@ -281,3 +281,41 @@ function updateMobileEftposFee() {
     mobileEftposFeeInput.value = '';
   }
 }
+
+
+
+
+
+
+
+
+
+// ......................INTEGRATED POS FEES RENTAL COUNTERTOP
+// Define a function to check the input fields and update the countertopFee field
+function updateCountertopFee() {
+  // Get the input fields and select element
+  const countertopTerminal = document.querySelector('.countertop');
+  const pricing = document.querySelector('#pricing');
+  const countertopFee = document.querySelector('.countertopFee');
+
+  // Define an array of allowed options
+  const allowedOptions29 = ['ARAMA Members', 'Boost Juice', 'Cafés', 'Coffee Shops', 'Convenience Stores', 'Discount Stores', 'Fruit & Veg Shops', 'Gloria Jeans', 'Go Vita and other Health Food Stores', 'Newsagencies (Non Membership)', 'Pricing approved by Product', 'Real Estate Agencies', 'Registered Charities or Not for Profit Organisations', 'Restaurants', 'Takeaway Food', 'Taxis'];
+  const allowedOptions26 = ['Dominos', 'Newsagencies ALNA members', 'Pizza Hut'];
+
+
+  // Check if countertopTerminal field has a value and pricing field is selected to an allowed option
+  if (countertopTerminal.value !== '' && allowedOptions29.includes(pricing.value)) {
+    // Add $29 to the countertopFee field
+    countertopFee.value = '$29';
+  } else if (countertopTerminal.value !== '' && allowedOptions26.includes(pricing.value)) {
+    // Add $26 to the countertopFee field
+    countertopFee.value = '$26';
+  }else
+   {
+    countertopFee.value = ''; // Clear the countertopFee field if the conditions are not met
+  }
+}
+
+// Call the updateCountertopFee function when the change event is triggered on the countertopTerminal or pricing field
+document.querySelector('.countertop').addEventListener('change', updateCountertopFee);
+document.querySelector('#pricing').addEventListener('change', updateCountertopFee);
