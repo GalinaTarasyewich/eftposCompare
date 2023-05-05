@@ -342,7 +342,7 @@ function showPricing() {
       comments1.value = "RATES ARE INDUSTRY APPROVED"
 
       break;
-    case "Supermarkets(Buying group members)":
+    case "Supermarkets (Buying group members)":
       merchantServiceFee.value = "0.39%";
       debitCardFee.value = "0.39%";
       comments1.value = "RATES ARE INDUSTRY APPROVED"
@@ -362,7 +362,7 @@ function showPricing() {
 
       break;
 
-    case "Tobacconist":
+    case "Tobacconists":
       merchantServiceFee.value = "0.33%";
       debitCardFee.value = "0.33%";
       comments1.value = "RATES ARE INDUSTRY APPROVED"
