@@ -263,10 +263,13 @@ Array.from(eftposTerminalInputs).forEach(input => {
 pricingSelect.addEventListener('change', updateMobileEftposFee);
 
 function updateMobileEftposFee() {
-  // Check if some eftposTerminal inputs are not empty and pricing selection
-  const is26 = Array.from(eftposTerminalInputs).some(input => input.value !== '') && pricingSelect.value === 'ARAMA Members';
+  const allowedOptions29 = ['Boost Juice', 'Cafés', 'Coffee Shops', 'Convenience Stores', 'Discount Stores', 'Fruit & Veg Shops', 'Gloria Jeans', 'Go Vita and other Health Food Stores', 'Newsagencies (Non Membership)', 'Pricing approved by Product', 'Real Estate Agencies', 'Registered Charities or Not for Profit Organisations', 'Restaurants', 'Takeaway Food', 'Taxis'];
+  const allowedOptions26 = ['ARAMA Members', 'Dominos', 'Newsagencies ALNA members', 'Pizza Hut'];
 
-  const is29 = Array.from(eftposTerminalInputs).some(input => input.value !== '') && pricingSelect.value === 'Boost Juice';
+  // Check if some eftposTerminal inputs are not empty and pricing selection
+  const is26 = Array.from(eftposTerminalInputs).some(input => input.value !== '') && allowedOptions26.includes(pricingSelect.value);
+
+  const is29 = Array.from(eftposTerminalInputs).some(input => input.value !== '') && allowedOptions29.includes(pricingSelect.value);
 
   // Set the value of mobileEftposFeeInput to "$29" if all conditions are true
   if (is29) {
