@@ -121,6 +121,19 @@ $('.howManyDirectors').change(function() {
   }
 });
 
+const offerTrial = document.getElementById("offerTrial");
+const trialAlert = document.getElementById("trialAlert");
+
+offerTrial.addEventListener("change", function() {
+  if (offerTrial.value === "Yes") {
+    trialAlert.classList.remove("d-none");
+  } else {
+    trialAlert.classList.add("d-none");
+  }
+});
+
+
+
 
 
 

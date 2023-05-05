@@ -20,7 +20,6 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
 
 </head>
 
@@ -1255,12 +1254,21 @@
                   <div class="form-group ">
                     <label>Does your business offer goods or services on a trial basis where credit card details are recorded and used
                       to process payment at the end of the trial?</label>
-                    <select id="offerTrial" class="form-control" name="offerTrialQ" required>
+                    <select id="offerTrial" class="offerTrial form-control" name="offerTrialQ" required>
                       <option value="">-</option>
                       <option value="Yes">Yes</option>
                       <option value="No">No</option>
                     </select>
                     <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                  </div>
+
+                  <div id="trialAlert" class="d-none alert alert-danger d-flex align-items-center" role="alert">
+                    <svg class=" bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+                      <use xlink:href="#exclamation-triangle-fill" />
+                    </svg>
+                    <div>
+                      This is an unacceptable criteria. Please advise the customer the application cannot proceed
+                    </div>
                   </div>
 
 
