@@ -32,10 +32,10 @@
       <!-- Nav Bar logo -->
       <nav class="navbar navbar-expand-lg  navbar-dark dark-part">
         <a class="navbar-brand" href="index.html">
-          <img   src="images/eftposlogo.png" width="25%" alt="">
+          <img src="images/eftposlogo.png" width="25%" alt="">
         </a>
       </nav>
-<br>
+      <br>
       <div class="title">
 
         <h1 class="title-text">Application for a Merchant Facility - FLAT RATE.</h1>
@@ -1373,8 +1373,13 @@
                     <select class="form-control" name="softwarePackage" required>
                       <option value="">-</option>
                       <option value="N/A">N/A</option>
-                      <option value="Suncorp Only">Suncorp Only</option>
-                      <option value="Sun + Loy">Sun + Loy</option>
+                      <option value="">-</option>
+                      <option value="N/A">N/A</option>
+                      <option value="Suncorp only">Suncorp only</option>
+                      <option value="Sun + HealthPoint">Sun + HealthPoint</option>
+                      <option value="Sun + HealthPoint + Medicare">Sun + HealthPoint + Medicare</option>
+                      <option value="Sun + Medicare">Sun + Medicare</option>
+                      <option value="Sun + epay">Sun + epay</option>
                     </select>
                     <div class="invalid-feedback">Select an option from the dropdown menu</div>
                     <small>Choose N/A if applying for Integrated POS.</small>
@@ -1475,7 +1480,6 @@
                       <option value="">-</option>
                       <option value="N/A">N/A</option>
                       <option value="Suncorp Only">Suncorp Only</option>
-                      <option value="Sun + Loy">Sun + Loy</option>
                     </select>
                     <div class="invalid-feedback">Select an option from the dropdown menu</div>
                     <small>Choose N/A if applying for EFTPOS.</small>
@@ -1673,13 +1677,13 @@
 
                   <div class="form-group">
                     <label>AMEX Merchant Number:</label>
-                    <input  type="text" class="form-control" pattern="^\d{10}$" name="amex" value="" >
+                    <input type="text" class="form-control" pattern="^\d{10}$" name="amex" value="">
                     <div class="invalid-feedback">Please enter a 10-digit number</div>
                   </div>
 
                   <div class="form-group">
                     <label>Diners Merchant Number:</label>
-                    <input  type="text" class="form-control" pattern=".{1,9}|.{11,}" name="diners" value="" >
+                    <input type="text" class="form-control" pattern=".{1,9}|.{11,}" name="diners" value="">
                     <div class="invalid-feedback">Input value cannot have exactly 10 characters </div>
                   </div>
 
