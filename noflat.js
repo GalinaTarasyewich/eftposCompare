@@ -144,253 +144,100 @@ function showPricing() {
   var debitCardFee = document.getElementById("debitCardFee");
   var comments1 = document.getElementById("comments1");
 
-
-
   var selectedOption = select.options[select.selectedIndex].value;
   switch (selectedOption) {
-    case "Flat Rate Offer":
+    case "ARAMA Members":
+      merchantServiceFee.value = "0.79%";
+      debitCardFee.value = "$0.15";
+      break;
+    case "Boost Juice":
+      merchantServiceFee.value = "1.05%";
+      debitCardFee.value = "$0.05";
+      break;
+    case "Cafés":
+      merchantServiceFee.value = "0.85%";
+      debitCardFee.value = "$0.08";
+      break;
+    case "Coffee Shops":
+      merchantServiceFee.value = "1.30%";
+      debitCardFee.value = "$0.06";
+      break;
+    case "Convenience Stores":
       merchantServiceFee.value = "0.88%";
-      debitCardFee.value = "0.88%";
+      debitCardFee.value = "$0.07";
+      break;
+
+    case "Discount Stores":
+      merchantServiceFee.value = "0.80%";
+      debitCardFee.value = "$0.08";
+
+      break;
+    case "Dominos":
+      merchantServiceFee.value = "0.78%";
+      debitCardFee.value = "$0.08";
+
+      break;
+
+    case "Fruit & Veg Shops":
+      merchantServiceFee.value = "0.85%";
+      debitCardFee.value = "$0.07";
+      break;
+
+    case "Gloria Jeans":
+      merchantServiceFee.value = "1.18%";
+      debitCardFee.value = "$0.06";
+
+      break;
+    case "Go Vita and other Health Food Stores":
+      merchantServiceFee.value = "0.70%";
+      debitCardFee.value = "$0.07";
+
+      break;
+    case "Newsagencies (Non Membership)":
+      merchantServiceFee.value = "0.85%";
+      debitCardFee.value = "$0.12";
+
+      break;
+    case "Newsagencies ALNA members":
+      merchantServiceFee.value = "0.73%";
+      debitCardFee.value = "$0.05";
+
+      break;
+    case "Pizza Hut":
+      merchantServiceFee.value = "0.78%";
+      debitCardFee.value = "$0.08";
+
       break;
     case "Pricing approved by Product":
       merchantServiceFee.value = "";
       debitCardFee.value = "";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-      break;
-    case "Accountants":
-      merchantServiceFee.value = "0.88%";
-      debitCardFee.value = "0.88%";
-      break;
-    case "Automotive Body Repair Stores":
-      merchantServiceFee.value = "0.49%";
-      debitCardFee.value = "0.49%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-      break;
-    case "Automotive Parts Stores":
-      merchantServiceFee.value = "0.49%";
-      debitCardFee.value = "0.49%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-      break;
 
-    case "Bakeries":
+      break;
+    case "Real Estate Agencies":
       merchantServiceFee.value = "0.78%";
-      debitCardFee.value = "0.78%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
+      debitCardFee.value = "$0.15";
 
       break;
-    case "Butchers":
-      merchantServiceFee.value = "0.49%";
-      debitCardFee.value = "0.49%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-    case "Child Care Centres":
-      merchantServiceFee.value = "0.88%";
-      debitCardFee.value = "0.88%";
-      break;
-
-    case "Clothing Stores":
-      merchantServiceFee.value = "0.60%";
-      debitCardFee.value = "0.60%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-    case "Computer Stores":
-      merchantServiceFee.value = "0.69%";
-      debitCardFee.value = "0.69%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-    case "Drinking Places":
-      merchantServiceFee.value = "0.60%";
-      debitCardFee.value = "0.60%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-    case "Dry Cleaners":
-      merchantServiceFee.value = "0.75%";
-      debitCardFee.value = "0.75%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-    case "Floor Covering Stores":
-      merchantServiceFee.value = "0.62%";
-      debitCardFee.value = "0.62%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-    case "Florists":
-      merchantServiceFee.value = "0.60%";
-      debitCardFee.value = "0.60%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-    case "Furniture Stores":
-      merchantServiceFee.value = "0.49%";
-      debitCardFee.value = "0.49%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-    case "Gifts & Souvenir Stores":
-      merchantServiceFee.value = "0.55%";
-      debitCardFee.value = "0.55%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
+    case "Registered Charities or Not for Profit Organisations":
+      merchantServiceFee.value = "0.30%";
+      debitCardFee.value = "$0.05";
 
       break;
 
-    case "Hairdressers & Beauticians":
-      merchantServiceFee.value = "0.59%";
-      debitCardFee.value = "0.59%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
+    case "Restaurants":
+      merchantServiceFee.value = "0.82%";
+      debitCardFee.value = "$0.10";
 
       break;
 
-    case "Hardware Stores":
-      merchantServiceFee.value = "0.49%";
-      debitCardFee.value = "0.49%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
+    case "Takeaway Food":
+      merchantServiceFee.value = "0.90%";
+      debitCardFee.value = "$0.09";
 
       break;
-    case "Home Furnishing Stores":
-      merchantServiceFee.value = "0.75%";
-      debitCardFee.value = "0.75%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-    case "Landscaping / Garden Centres":
-      merchantServiceFee.value = "0.55%";
-      debitCardFee.value = "0.55%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-
-    case "Liquor Stores":
-      merchantServiceFee.value = "0.49%";
-      debitCardFee.value = "0.49%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-
-
-    case "Jewellery Stores":
-      merchantServiceFee.value = "0.55%";
-      debitCardFee.value = "0.55%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-
-    case "Mechanics":
-      merchantServiceFee.value = "0.47%";
-      debitCardFee.value = "0.47%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-
-
-    case "Medical Practitioners":
-      merchantServiceFee.value = "0.70%";
-      debitCardFee.value = "0.70%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-    case "Membership Clubs":
-      merchantServiceFee.value = "0.85%";
-      debitCardFee.value = "0.85%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-    case "Miscellaneous General Merchandise":
-      merchantServiceFee.value = "0.45%";
-      debitCardFee.value = "0.45%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-    case "Pest Control":
-      merchantServiceFee.value = "0.88%";
-      debitCardFee.value = "0.88%";
-
-      break;
-    case "Pet Shops":
-      merchantServiceFee.value = "0.49%";
-      debitCardFee.value = "0.49%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-
-    case "Petrol Stations":
-      merchantServiceFee.value = "0.35%";
-      debitCardFee.value = "0.35%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-    case "Pharmacies":
-      merchantServiceFee.value = "0.55%";
-      debitCardFee.value = "0.55%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-
-    case "Schools & Educational Services":
-      merchantServiceFee.value = "0.80%";
-      debitCardFee.value = "0.80%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-    case "Sporting Goods Stores":
-      merchantServiceFee.value = "0.50%";
-      debitCardFee.value = "0.50%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-    case "Supermarkets (Buying group members)":
-      merchantServiceFee.value = "0.39%";
-      debitCardFee.value = "0.39%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-
-    case "Supermarkets & Grocery Stores":
-      merchantServiceFee.value = "0.50%";
-      debitCardFee.value = "0.50%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-    case "Swimming Pool Stores":
-      merchantServiceFee.value = "0.69%";
-      debitCardFee.value = "0.69%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-
-    case "Tobacconists":
-      merchantServiceFee.value = "0.33%";
-      debitCardFee.value = "0.33%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-    case "Tradies":
-      merchantServiceFee.value = "0.80%";
-      debitCardFee.value = "0.80%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-
-    case "Tyre Stores":
-      merchantServiceFee.value = "0.35%";
-      debitCardFee.value = "0.35%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-    case "Variety Stores":
-      merchantServiceFee.value = "0.49%";
-      debitCardFee.value = "0.49%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
-
-      break;
-    case "Vets":
-      merchantServiceFee.value = "0.39%";
-      debitCardFee.value = "0.39%";
-      comments1.value = "RATES ARE INDUSTRY APPROVED"
+    case "Taxis":
+      merchantServiceFee.value = "1.25%";
+      debitCardFee.value = "$0.15";
 
       break;
 
