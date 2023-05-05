@@ -247,3 +247,34 @@ function showPricing() {
 
   }
 }
+
+
+// Get the required elements
+const eftposTerminalInputs = document.querySelectorAll('.eftposTerminal');
+const pricingSelect = document.querySelector('#pricing');
+const mobileEftposFeeInput = document.querySelector('.mobileEftposFee');
+
+// Add an event listener to each eftposTerminal input
+Array.from(eftposTerminalInputs).forEach(input => {
+  input.addEventListener('input', updateMobileEftposFee);
+});
+
+// Add an event listener to the pricing select
+pricingSelect.addEventListener('change', updateMobileEftposFee);
+
+function updateMobileEftposFee() {
+  // Check if some eftposTerminal inputs are not empty and pricing selection
+  const is26 = Array.from(eftposTerminalInputs).some(input => input.value !== '') && pricingSelect.value === 'ARAMA Members';
+
+  const is29 = Array.from(eftposTerminalInputs).some(input => input.value !== '') && pricingSelect.value === 'Boost Juice';
+
+  // Set the value of mobileEftposFeeInput to "$29" if all conditions are true
+  if (is29) {
+    mobileEftposFeeInput.value = '$29';
+  } else if (is26){
+    mobileEftposFeeInput.value = '$26'
+  }
+   else {
+    mobileEftposFeeInput.value = '';
+  }
+}
