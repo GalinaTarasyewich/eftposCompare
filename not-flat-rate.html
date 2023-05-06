@@ -1598,14 +1598,12 @@
                   </div>
 
 
-
-
-                  <div class="form-group ">
-                    <label>Promotion Code</label>
-                    <select id="promo" class="form-control" name="promotionCode">
-                      <option value="">--Choose an option or leave blank--</option>
-                      <option value="3KBACK">3KBACK (ends May 31, 2023)</option>
-                    </select>
+                  <div class="form-group">
+                    <label>Promotion Code:</label>
+                    <input "width:500px; height:30px;" type="text" class="form-control" name="promotionCode" list="promotionCode" placeholder="Type or choose from the dropdown" value="">
+                    <datalist id="promo">
+                      <option value="3KBACK">
+                    </datalist>
                   </div>
 
 
@@ -1644,10 +1642,10 @@
                     <div class="row">
                       <div class="col">
                         <label>Mobile EFTPOS Terminal Rental</label>
-                        <input type="text"  class="mobileEftposFee form-control" name="mobileEftposFee" value="">
+                        <input type="text" class="mobileEftposFee form-control" name="mobileEftposFee" value="">
                         <br>
                         <label>Countertop Integrated Terminal Rental</label>
-                         <input type="text" class="countertopFee form-control" name="countertopFee" value="">
+                        <input type="text" class="countertopFee form-control" name="countertopFee" value="">
                         <br>
                         <label>Mobile Integrated Terminal Rental</label>
                         <input type="text" class="mobileIntegratedFee form-control" name="mobileIntegratedFee" value="">
@@ -1689,13 +1687,14 @@
                     <input id="debitCardFee" type="text" class="form-control" name="debitCardFee" value="" required>
                   </div>
 
-                  <div class="form-group commentsHide">
-                    <label>High Risk Comments</label>
-                    <select class="form-control" name="highRiskComments">
+                  <div class="form-group ">
+                    <label>Do you wish to participate in least cost routing?</label>
+                    <select class="form-control" name="lcr" required>
                       <option value="">-</option>
-                      <option value="Merchants accepts payment at completion of work.">Merchants accepts payment at completion of work.</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
                     </select>
-                    <small>Choose "Merchants accepts payment at completion of work." to proceed with application.</small>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
                   </div>
 
 

@@ -1593,12 +1593,13 @@
                   <hr>
                   <p><strong>Merchant Pricing</strong></p>
 
-                  <div class="form-group ">
-                    <label>Promotion Code</label>
-                    <select id="promo" class="form-control" name="promotionCode">
-                      <option value="">--Choose an option or leave blank--</option>
-                      <option value="3KBACK">3KBACK (ends May 31, 2023)</option>
-                    </select>
+
+                  <div class="form-group">
+                    <label>Promotion Code:</label>
+                    <input "width:500px; height:30px;" type="text" class="form-control" name="promotionCode" list="promotionCode" placeholder="Type or choose from the dropdown" value="">
+                    <datalist id="promo">
+                      <option value="3KBACK">
+                    </datalist>
                   </div>
 
 
