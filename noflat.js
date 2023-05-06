@@ -319,3 +319,42 @@ function updateCountertopFee() {
 // Call the updateCountertopFee function when the change event is triggered on the countertopTerminal or pricing field
 document.querySelector('.countertop').addEventListener('change', updateCountertopFee);
 document.querySelector('#pricing').addEventListener('change', updateCountertopFee);
+
+
+
+
+
+//  .../.........................MOBILE INTEGRATED RENTAL Fees
+
+// Get the required elements
+const mobileInputs = document.querySelectorAll('.mobile');
+// const pricingSelect = document.querySelector('#pricing');
+const mobileIntegratedFee = document.querySelector('.mobileIntegratedFee');
+
+// Add an event listener to each eftposTerminal input
+Array.from(mobileInputs).forEach(input => {
+  input.addEventListener('input', updateMobileIntegratedFee);
+});
+
+// Add an event listener to the pricing select
+pricingSelect.addEventListener('change', updateMobileIntegratedFee);
+
+function updateMobileIntegratedFee() {
+  const allowedOptions32 = ['ARAMA Members', 'Boost Juice', 'Cafés', 'Coffee Shops', 'Convenience Stores', 'Discount Stores', 'Fruit & Veg Shops', 'Gloria Jeans', 'Go Vita and other Health Food Stores', 'Newsagencies (Non Membership)', 'Pricing approved by Product', 'Real Estate Agencies', 'Registered Charities or Not for Profit Organisations', 'Restaurants', 'Takeaway Food', 'Taxis'];
+  const allowedOptions29 = ['Dominos', 'Newsagencies ALNA members', 'Pizza Hut'];
+
+  // Check if some eftposTerminal inputs are not empty and pricing selection
+  const is29 = Array.from(mobileInputs).some(input => input.value !== '') && allowedOptions29.includes(pricingSelect.value);
+
+  const is32 = Array.from(mobileInputs).some(input => input.value !== '') && allowedOptions32.includes(pricingSelect.value);
+
+  // Set the value of mobileEftposFeeInput to "$29" if all conditions are true
+  if (is32) {
+    mobileIntegratedFee.value = '$32';
+  } else if (is29){
+    mobileIntegratedFee.value = '$29'
+  }
+   else {
+    mobileIntegratedFee.value = '';
+  }
+}
