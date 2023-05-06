@@ -1689,12 +1689,19 @@
 
                   <div class="form-group ">
                     <label>Do you wish to participate in least cost routing?</label>
-                    <select class="form-control" name="lcr" required>
+                    <select class=" lcr form-control" name="lcr" required>
                       <option value="">-</option>
                       <option value="Yes">Yes</option>
                       <option value="No">No</option>
                     </select>
                     <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Least cost routing limit:</label>
+                    <input id="lcrlimit" type="text" class="form-control" name="lcrlimit" value="" >
+                    <input id="lcrlimitComment" type="text" class="form-control" name="lcrlimitComment" value="" >
+
                   </div>
 
 

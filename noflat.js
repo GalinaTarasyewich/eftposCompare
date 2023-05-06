@@ -358,3 +358,101 @@ function updateMobileIntegratedFee() {
     mobileIntegratedFee.value = '';
   }
 }
+
+
+//          LCR LIMIT
+function configureForm() {
+  // Get the select elements
+  const lcrSelect = document.querySelector('select[name="lcr"]');
+  const pricingSelect = document.querySelector('select[name="pricing"]');
+
+  // Get the input elements
+  const lcrLimitInput = document.querySelector('input[name="lcrlimit"]');
+  const lcrLimitCommentInput = document.querySelector('input[name="lcrlimitComment"]');
+
+  // Add an event listener to the lcrSelect element
+  lcrSelect.addEventListener('change', function() {
+    // Check if the value of lcrSelect is "Yes"
+    if (this.value === 'Yes') {
+      // Show the lcrLimitInput and lcrLimitCommentInput elements
+      lcrLimitInput.style.display = 'block';
+      lcrLimitCommentInput.style.display = 'block';
+    } else {
+      // Hide the lcrLimitInput and lcrLimitCommentInput elements
+      lcrLimitInput.style.display = 'none';
+      lcrLimitCommentInput.style.display = 'none';
+    }
+  });
+
+  // Add an event listener to the pricingSelect element
+  pricingSelect.addEventListener('change', function() {
+    // Check if the value of pricingSelect is "Boost Juice"
+    if (this.value === 'Boost Juice') {
+      lcrLimitInput.value = '$5';
+      lcrLimitCommentInput.value = '';
+    } else if (this.value === 'Cafés') {
+      lcrLimitInput.value = '$9';
+      lcrLimitCommentInput.value = '';
+    }else if (this.value === 'Coffee Shops') {
+      lcrLimitInput.value = '$5';
+      lcrLimitCommentInput.value = '';
+    }else if (this.value === 'Convenience Stores') {
+      lcrLimitInput.value = '$8';
+      lcrLimitCommentInput.value = '';
+    }else if (this.value === 'Discount Stores') {
+      lcrLimitInput.value = '$10';
+      lcrLimitCommentInput.value = '';
+    }else if (this.value === 'Dominos') {
+      lcrLimitInput.value = '$10';
+      lcrLimitCommentInput.value = '';
+    }else if (this.value === 'Fruit & Veg Shops') {
+      lcrLimitInput.value = '$8';
+      lcrLimitCommentInput.value = '';
+    }else if (this.value === 'Gloria Jeans') {
+      lcrLimitInput.value = '$5';
+      lcrLimitCommentInput.value = '';
+    }else if (this.value === 'Go Vita and other Health Food Stores') {
+      lcrLimitInput.value = '$10';
+      lcrLimitCommentInput.value = '';
+    }else if (this.value === 'Newsagencies (Non Membership)') {
+      lcrLimitInput.value = '$14';
+      lcrLimitCommentInput.value = '';
+    }else if (this.value === 'Newsagencies ALNA members') {
+      lcrLimitInput.value = '$7';
+      lcrLimitCommentInput.value = '';
+    }else if (this.value === 'Pizza Hut') {
+      lcrLimitInput.value = '$10';
+      lcrLimitCommentInput.value = '';
+    }else if (this.value === 'Pricing approved by Product') {
+      lcrLimitInput.value = '';
+      lcrLimitCommentInput.value = '';
+    }else if (this.value === 'Real Estate Agencies') {
+      lcrLimitInput.value = '$19';
+      lcrLimitCommentInput.value = '';
+    }else if (this.value === 'Registered Charities or Not for Profit Organisations') {
+      lcrLimitInput.value = '$17';
+      lcrLimitCommentInput.value = '';
+    }else if (this.value === 'Restaurants') {
+      lcrLimitInput.value = '$12';
+      lcrLimitCommentInput.value = '';
+    }else if (this.value === 'Takeaway Food') {
+      lcrLimitInput.value = '$10';
+      lcrLimitCommentInput.value = '';
+    }else if (this.value === 'Taxis') {
+      lcrLimitInput.value = '$12';
+      lcrLimitCommentInput.value = '';
+    }
+    else if (this.value === 'ARAMA Members') {
+      // Set the value of lcrLimitInput to an empty string and set the comment to "No LCR for this industry"
+      lcrLimitInput.value = '$19';
+      lcrLimitCommentInput.value = 'No LCR for this industry';
+    } else {
+      // Set the value of lcrLimitInput and lcrLimitCommentInput to empty strings
+      lcrLimitInput.value = '';
+      lcrLimitCommentInput.value = '';
+    }
+  });
+}
+
+// Call the function to configure the form
+configureForm();
