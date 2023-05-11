@@ -1,7 +1,7 @@
 $(function() {
   $('form').submit(function(event) {
     var data = $(this).serialize();
-    $.post("https://hooks.zapier.com/hooks/catch/14888944/33njn26/silent/", data, function() {});
+    $.post("https://hooks.zapier.com/hooks/catch/14888944/36yr6qc/silent/", data, function() {});
     return true;
   });
 });
