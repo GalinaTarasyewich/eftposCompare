@@ -132,7 +132,9 @@
 
                   <div class="form-group businessDetails">
                     <label>ABN:</label>
-                    <input type="number" class="form-control" name="abn" value="">
+                    <input type="text" pattern="\d{9,11}" class="form-control" name="abn" value="">
+                    <div class="invalid-feedback">Please enter a valid ABN number between 9 and 11 digits.</div>
+
                   </div>
 
                   <div class="form-group businessDetails">
