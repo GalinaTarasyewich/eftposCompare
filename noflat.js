@@ -456,3 +456,72 @@ function configureForm() {
 
 // Call the function to configure the form
 configureForm();
+
+
+
+// Add slashes in the dates inputs
+
+
+// director1
+//Put our input DOM element into a jQuery Object
+var $dob1 = jQuery('input[name="director1DOB"]');
+
+//Bind keyup/keydown to the input
+$dob1.bind('keyup','keydown', function(e){
+
+  //To accomdate for backspacing, we detect which key was pressed - if backspace, do nothing:
+	if(e.which !== 8) {
+		var numChars = $dob1.val().length;
+		if(numChars === 2 || numChars === 5){
+			var thisVal = $dob1.val();
+			thisVal += '/';
+			$dob1.val(thisVal);
+		}
+  }
+});
+
+// director2
+var $dob2 = jQuery('input[name="director2DOB"]');
+
+$dob2.bind('keyup','keydown', function(e){
+
+	if(e.which !== 8) {
+		var numChars = $dob2.val().length;
+		if(numChars === 2 || numChars === 5){
+			var thisVal = $dob2.val();
+			thisVal += '/';
+			$dob2.val(thisVal);
+		}
+  }
+});
+
+// director3
+var $dob3 = jQuery('input[name="director3DOB"]');
+
+$dob3.bind('keyup','keydown', function(e){
+
+	if(e.which !== 8) {
+		var numChars = $dob3.val().length;
+		if(numChars === 2 || numChars === 5){
+			var thisVal = $dob3.val();
+			thisVal += '/';
+			$dob3.val(thisVal);
+		}
+  }
+});
+
+
+// director4
+var $dob4 = jQuery('input[name="director4DOB"]');
+
+$dob4.bind('keyup','keydown', function(e){
+
+	if(e.which !== 8) {
+		var numChars = $dob4.val().length;
+		if(numChars === 2 || numChars === 5){
+			var thisVal = $dob4.val();
+			thisVal += '/';
+			$dob4.val(thisVal);
+		}
+  }
+});
