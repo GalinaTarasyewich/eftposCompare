@@ -350,7 +350,7 @@ const mobileEftposFeeInput = document.querySelector('.mobileEftposFee');
       mobileEftposFeeInput.value = "Waived"
       countertopFee.value = "Waived";
       mobileIntegratedFee.value = "Waived";
-      
+
       break;
 
     case "ARAMA Members":
