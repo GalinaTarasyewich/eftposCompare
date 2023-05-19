@@ -83,101 +83,111 @@
 
 
 
-  <div class="b-example-divider"></div>
 
-    <div class="container my-5">
-        <h1 class="text-center">Rates:</h1>
-      <div class="row mb-3 p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
-        <label for="pricing" class="col-sm-2 col-form-label text-center">Category:</label>
-        <div class="col-sm-10">
-          <select id="pricing" class="form-control text-center"  name="pricing" onchange="showPricing()" >
-            <option value="">--Please choose an option--</option>
-            <option value="" disabled ></option>
-            <option value="" disabled >--------------------Flat Rates--------------------</option>
-            <option value="Flat Rate Offer">Flat Rate Offer</option>
-            <option value="Pricing approved by Product Accountants">Pricing approved by Product</option>
-            <option value="Accountants">Accountants</option>
-            <option value="Automotive Body Repair Stores">Automotive Body Repair Stores</option>
-            <option value="Automotive Parts Stores">Automotive Parts Stores</option>
-            <option value="Bakeries">Bakeries</option>
-            <option value="Butchers">Butchers</option>
-            <option value="Child Care Centres">Child Care Centres</option>
-            <option value="Clothing Stores">Clothing Stores</option>
-            <option value="Computer Stores">Computer Stores</option>
-            <option value="Drinking Places">Drinking Places</option>
-            <option value="Dry Cleaners">Dry Cleaners</option>
-            <option value="Floor Covering Stores">Floor Covering Stores</option>
-            <option value="Florists">Florists</option>
-            <option value="Furniture Stores">Furniture Stores</option>
-            <option value="Gifts &amp; Souvenir Stores">Gifts &amp; Souvenir Stores</option>
-            <option value="Hairdressers &amp; Beauticians">Hairdressers &amp; Beauticians</option>
-            <option value="Hardware Stores">Hardware Stores</option>
-            <option value="Home Furnishing Stores">Home Furnishing Stores</option>
-            <option value="Landscaping / Garden Centres">Landscaping / Garden Centres</option>
-            <option value="Liquor Stores">Liquor Stores</option>
-            <option value="Jewellery Stores">Jewellery Stores</option>
-            <option value="Mechanics">Mechanics</option>
-            <option value="Medical Practitioners">Medical Practitioners</option>
-            <option value="Membership Clubs">Membership Clubs</option>
-            <option value="Miscellaneous General Merchandise">Miscellaneous General Merchandise</option>
-            <option value="Pest Control">Pest Control</option>
-            <option value="Pet Shops">Pet Shops</option>
-            <option value="Petrol Stations">Petrol Stations</option>
-            <option value="Pharmacies">Pharmacies</option>
-            <option value="Schools &amp; Educational Services">Schools &amp; Educational Services</option>
-            <option value="Sporting Goods Stores">Sporting Goods Stores</option>
-            <option value="Supermarkets (Buying group members)">Supermarkets (Buying group members)</option>
-            <option value="Supermarkets &amp; Grocery Stores">Supermarkets &amp; Grocery Stores</option>
-            <option value="Swimming Pool Stores">Swimming Pool Stores</option>
-            <option value="Tobacconists">Tobacconists</option>
-            <option value="Tradies">Tradies</option>
-            <option value="Tyre Stores">Tyre Stores</option>
-            <option value="Variety Stores">Variety Stores</option>
-            <option value="Vets">Vets</option>
-            <option value="" disabled ></option>
-            <option value="" disabled >--------------------Not Flat Rates--------------------</option>
-            <option value="ARAMA Members">ARAMA Members</option>
-            <option value="Boost Juice">Boost Juice</option>
-            <option value="Cafés">Cafés</option>
-            <option value="Coffee Shops">Coffee Shops</option>
-            <option value="Convenience Stores">Convenience Stores</option>
-            <option value="Discount Stores">Discount Stores</option>
-            <option value="Dominos">Dominos</option>
-            <option value="Fruit &amp; Veg Shops">Fruit &amp; Veg Shops</option>
-            <option value="Gloria Jeans">Gloria Jeans</option>
-            <option value="Go Vita and other Health Food Stores">Go Vita and other Health Food Stores</option>
-            <option value="Newsagencies (Non Membership)">Newsagencies (Non Membership)</option>
-            <option value="Newsagencies ALNA members">Newsagencies ALNA members</option>
-            <option value="Pizza Hut">Pizza Hut</option>
-            <option value="Pricing approved by Product">Pricing approved by Product</option>
-            <option value="Real Estate Agencies">Real Estate Agencies</option>
-            <option value="Registered Charities or Not for Profit Organisations">Registered Charities or Not for Profit Organisations</option>
-            <option value="Restaurants">Restaurants</option>
-            <option value="Takeaway Food">Takeaway Food</option>
-            <option value="Taxis">Taxis</option>
-          </select>
-        </div>
-
-
-        <div class="col-lg-4 offset-lg-1 ">
-          <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-                  </div>
-        </div>
-        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-                    <div class="form-group">
-            <label>Merchant Service Fee (as a % of Credit Card transaction value, charged at the end of each calendar month):</label>
-            <input id="merchantServiceFee" type="text" class="form-control" name="merchantServiceFee" value="" required>
-          </div>
-
-
-          <div class="form-group">
-            <label>Debit Card Transaction Fee (per Debit Card transaction, charged at the end of each calendar month):</label>
-            <input id="debitCardFee" type="text" class="form-control" name="debitCardFee" value="" required>
-          </div>
-
-        </div>
+  <div class="container my-5">
+    <h1 class="text-center">Rates:</h1>
+    <div class="row mb-3 p-4 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+      <label for="pricing" class="col-sm-2 col-form-label text-center"><h3>Category:</h3></label>
+      <div class="col-sm-10">
+        <select id="pricing" class="form-control text-center" name="pricing" onchange="showPricing()">
+          <option value="">--Please choose an option--</option>
+          <option value="" disabled></option>
+          <option value="" disabled>--------------------Flat Rates--------------------</option>
+          <option value="Flat Rate Offer">Flat Rate Offer</option>
+          <option value="Pricing approved by Product Accountants">Pricing approved by Product</option>
+          <option value="Accountants">Accountants</option>
+          <option value="Automotive Body Repair Stores">Automotive Body Repair Stores</option>
+          <option value="Automotive Parts Stores">Automotive Parts Stores</option>
+          <option value="Bakeries">Bakeries</option>
+          <option value="Butchers">Butchers</option>
+          <option value="Child Care Centres">Child Care Centres</option>
+          <option value="Clothing Stores">Clothing Stores</option>
+          <option value="Computer Stores">Computer Stores</option>
+          <option value="Drinking Places">Drinking Places</option>
+          <option value="Dry Cleaners">Dry Cleaners</option>
+          <option value="Floor Covering Stores">Floor Covering Stores</option>
+          <option value="Florists">Florists</option>
+          <option value="Furniture Stores">Furniture Stores</option>
+          <option value="Gifts &amp; Souvenir Stores">Gifts &amp; Souvenir Stores</option>
+          <option value="Hairdressers &amp; Beauticians">Hairdressers &amp; Beauticians</option>
+          <option value="Hardware Stores">Hardware Stores</option>
+          <option value="Home Furnishing Stores">Home Furnishing Stores</option>
+          <option value="Landscaping / Garden Centres">Landscaping / Garden Centres</option>
+          <option value="Liquor Stores">Liquor Stores</option>
+          <option value="Jewellery Stores">Jewellery Stores</option>
+          <option value="Mechanics">Mechanics</option>
+          <option value="Medical Practitioners">Medical Practitioners</option>
+          <option value="Membership Clubs">Membership Clubs</option>
+          <option value="Miscellaneous General Merchandise">Miscellaneous General Merchandise</option>
+          <option value="Pest Control">Pest Control</option>
+          <option value="Pet Shops">Pet Shops</option>
+          <option value="Petrol Stations">Petrol Stations</option>
+          <option value="Pharmacies">Pharmacies</option>
+          <option value="Schools &amp; Educational Services">Schools &amp; Educational Services</option>
+          <option value="Sporting Goods Stores">Sporting Goods Stores</option>
+          <option value="Supermarkets (Buying group members)">Supermarkets (Buying group members)</option>
+          <option value="Supermarkets &amp; Grocery Stores">Supermarkets &amp; Grocery Stores</option>
+          <option value="Swimming Pool Stores">Swimming Pool Stores</option>
+          <option value="Tobacconists">Tobacconists</option>
+          <option value="Tradies">Tradies</option>
+          <option value="Tyre Stores">Tyre Stores</option>
+          <option value="Variety Stores">Variety Stores</option>
+          <option value="Vets">Vets</option>
+          <option value="" disabled></option>
+          <option value="" disabled>--------------------Not Flat Rates--------------------</option>
+          <option value="ARAMA Members">ARAMA Members</option>
+          <option value="Boost Juice">Boost Juice</option>
+          <option value="Cafés">Cafés</option>
+          <option value="Coffee Shops">Coffee Shops</option>
+          <option value="Convenience Stores">Convenience Stores</option>
+          <option value="Discount Stores">Discount Stores</option>
+          <option value="Dominos">Dominos</option>
+          <option value="Fruit &amp; Veg Shops">Fruit &amp; Veg Shops</option>
+          <option value="Gloria Jeans">Gloria Jeans</option>
+          <option value="Go Vita and other Health Food Stores">Go Vita and other Health Food Stores</option>
+          <option value="Newsagencies (Non Membership)">Newsagencies (Non Membership)</option>
+          <option value="Newsagencies ALNA members">Newsagencies ALNA members</option>
+          <option value="Pizza Hut">Pizza Hut</option>
+          <option value="Pricing approved by Product">Pricing approved by Product</option>
+          <option value="Real Estate Agencies">Real Estate Agencies</option>
+          <option value="Registered Charities or Not for Profit Organisations">Registered Charities or Not for Profit Organisations</option>
+          <option value="Restaurants">Restaurants</option>
+          <option value="Takeaway Food">Takeaway Food</option>
+          <option value="Taxis">Taxis</option>
+        </select>
       </div>
+
+
+      <form class="row g-3">
+        <div class="col-md-6">
+          <label>Merchant Service Fee:</label>
+          <input id="merchantServiceFee" type="text" class="form-control" name="merchantServiceFee" value="">
+        </div>
+        <div class="col-md-6">
+          <label>Debit Card Transaction Fee:</label>
+          <input id="debitCardFee" type="text" class="form-control" name="debitCardFee" value="">
+        </div>
+
+        <div class="col-4">
+          <label>Mobile EFTPOS Terminal Rental</label>
+          <input type="text" class="mobileEftposFee form-control" name="mobileEftposFee" value="">
+        </div>
+
+
+        <div class="col-4">
+          <label>Countertop Integrated Terminal Rental</label>
+          <input type="text" class="countertopFee form-control" name="countertopFee" value="">
+        </div>
+
+
+        <div class="col-4">
+          <label>Mobile Integrated Terminal Rental</label>
+          <input type="text" class="mobileIntegratedFee form-control" name="mobileIntegratedFee" value="">
+        </div>
+      </form>
+
     </div>
+  </div>
 
 
 </body>
