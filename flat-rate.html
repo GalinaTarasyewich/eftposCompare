@@ -708,7 +708,7 @@
 
                   <div class="form-group">
                     <label>Merchant Category Code (MCC):</label>
-                    <input "width:500px; height:30px;" type="text" class="form-control" name="mcc" list="mcc" placeholder="Start typing or choose from the dropdown" value="" required>
+                    <input "width:500px; height:30px;" type="text" class="form-control" name="mcc" list="mcc" onchange="showHighRiskComments()" placeholder="Start typing or choose from the dropdown" value="" required>
                     <datalist id="mcc">
                       <option value="0742 - LOW - VETERINARY SERVICES">
                       <option value="0763 - LOW - AGRICULTURAL CO-OPERATIVES">
@@ -1676,15 +1676,6 @@
                     <input id="debitCardFee" type="text" class="form-control" name="debitCardFee" value="" required>
                   </div>
 
-                  <div class="form-group commentsHide">
-                    <label>High Risk Comments</label>
-                    <select class="form-control" name="highRiskComments">
-                      <option value="">-</option>
-                      <option value="Merchants accepts payment at completion of work.">Merchants accepts payment at completion of work.</option>
-                    </select>
-                    <small>Choose "Merchants accepts payment at completion of work." to proceed with application.</small>
-                  </div>
-
 
                   <div class="form-group">
                     <label>AMEX Merchant Number:</label>
@@ -2385,6 +2376,8 @@
                     <input id="comments1" type="text" class="form-control" placeholder="Comment here..." name="commentsLine1" value="">
                     <input type="text" class="form-control" placeholder="Comment here..." name="commentsLine2" value="">
                     <input type="text" class="form-control" placeholder="Comment here..." name="commentsLine3" value="">
+                    <input id="highRiskComments" type="text" class="form-control" placeholder="Comment here..." name="highRiskComments" value="">
+
                   </div>
 
                   <div class="form-group">
