@@ -38,17 +38,6 @@ $('.wishComm').change(function() {
 });
 
 
-$('.feeQ').change(function() {
-  if ($(this).val() === 'Yes') {
-    $('.feeHide').show();
-  } else {
-    $('.feeHide').hide();
-  }
-});
-
-
-
-
 
 
 $('.director1PostalAddress').change(function() {
@@ -598,3 +587,28 @@ function copyAddress() {
      postcodePostalInput.value = postcodeSiteInput.value;
    }
  }
+
+
+
+  function copyBank() {
+     var selectElement = document.querySelector('.feeQ');
+     var isDifferent = selectElement.value === 'Yes';
+
+     var bsbInput = document.querySelector('input[name="bsb"]');
+     var accNumberInput = document.querySelector('input[name="accNumber"]');
+     var accountNameInput = document.querySelector('input[name="accountName"]');
+
+     var bsbFeeInput = document.querySelector('input[name="bsbFee"]');
+     var accNumberFeeInput = document.querySelector('input[name="accNumberFee"]');
+     var accountNameFeeInput = document.querySelector('input[name="accountNameFee"]');
+
+     if (isDifferent) {
+       bsbFeeInput.value = '';
+       accNumberFeeInput.value = '';
+       accountNameFeeInput.value = '';
+     } else {
+       bsbFeeInput.value = bsbInput.value;
+       accNumberFeeInput.value = accNumberInput.value;
+       accountNameFeeInput.value = accountNameInput.value;
+     }
+   }

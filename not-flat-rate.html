@@ -349,10 +349,10 @@
 
                   <div class="form-group ">
                     <label>Is the Fee/Rebate Account different from the settlement account? </label>
-                    <select class="form-control feeQ" name="feeAccountDifferentQ" required>
+                    <select class="form-control feeQ" name="feeAccountDifferentQ" required onchange="copyBank()">
                       <option value="">-</option>
-                      <option value="Yes">Yes</option>
-                      <option value="No">No</option>
+                      <option value="Yes">Yes, different</option>
+                      <option value="No">No, the same</option>
                     </select>
                     <div class="invalid-feedback">Select an option from the dropdown menu</div>
                   </div>
