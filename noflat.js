@@ -47,13 +47,6 @@ $('.feeQ').change(function() {
 });
 
 
-$('.postalAddress').change(function() {
-  if ($(this).val() === 'Yes') {
-    $('.postalAddressHide').show();
-  } else {
-    $('.postalAddressHide').hide();
-  }
-});
 
 
 $('.pricingHighRisk').change(function() {
@@ -637,3 +630,35 @@ function showHighRiskComments() {
     highRiskCommentsInput.value = "";
   }
 }
+
+
+function copyAddress() {
+   var selectElement = document.querySelector('.postalAddress');
+   var isDifferent = selectElement.value === 'Yes';
+
+   var buildingSiteInput = document.querySelector('input[name="buildingSite"]');
+   var streetSiteInput = document.querySelector('input[name="streetSite"]');
+   var suburbSiteInput = document.querySelector('input[name="suburbSite"]');
+   var stateSiteInput = document.querySelector('select[name="stateSite"]');
+   var postcodeSiteInput = document.querySelector('input[name="postcodeSite"]');
+
+   var buildingPostalInput = document.querySelector('input[name="buildingPostal"]');
+   var streetPostalInput = document.querySelector('input[name="streetPostal"]');
+   var suburbPostalInput = document.querySelector('input[name="suburbPostal"]');
+   var statePostalInput = document.querySelector('select[name="statePostal"]');
+   var postcodePostalInput = document.querySelector('input[name="postcodePostal"]');
+
+   if (isDifferent) {
+     buildingPostalInput.value = '';
+     streetPostalInput.value = '';
+     suburbPostalInput.value = '';
+     statePostalInput.value = '';
+     postcodePostalInput.value = '';
+   } else {
+     buildingPostalInput.value = buildingSiteInput.value;
+     streetPostalInput.value = streetSiteInput.value;
+     suburbPostalInput.value = suburbSiteInput.value;
+     statePostalInput.value = stateSiteInput.value;
+     postcodePostalInput.value = postcodeSiteInput.value;
+   }
+ }
