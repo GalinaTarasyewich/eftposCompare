@@ -214,8 +214,8 @@ function showPricing() {
       break;
 
     case "Hairdressers & Beauticians":
-      merchantServiceFee.value = "0.59%";
-      debitCardFee.value = "0.59%";
+      merchantServiceFee.value = "0.55%";
+      debitCardFee.value = "0.55%";
       comments1.value = "RATES ARE INDUSTRY APPROVED"
 
       break;
@@ -255,8 +255,8 @@ function showPricing() {
       break;
 
     case "Mechanics":
-      merchantServiceFee.value = "0.47%";
-      debitCardFee.value = "0.47%";
+      merchantServiceFee.value = "0.42%";
+      debitCardFee.value = "0.42%";
       comments1.value = "RATES ARE INDUSTRY APPROVED"
 
       break;

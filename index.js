@@ -149,8 +149,8 @@ const mobileEftposFeeInput = document.querySelector('.mobileEftposFee');
       break;
 
     case "Hairdressers & Beauticians":
-      merchantServiceFee.value = "0.59%";
-      debitCardFee.value = "0.59%";
+      merchantServiceFee.value = "0.55%";
+      debitCardFee.value = "0.55%";
       mobileEftposFeeInput.value = "Waived"
       countertopFee.value = "Waived";
       mobileIntegratedFee.value = "Waived";
@@ -202,8 +202,8 @@ const mobileEftposFeeInput = document.querySelector('.mobileEftposFee');
       break;
 
     case "Mechanics":
-      merchantServiceFee.value = "0.47%";
-      debitCardFee.value = "0.47%";
+      merchantServiceFee.value = "0.42%";
+      debitCardFee.value = "0.42%";
       mobileEftposFeeInput.value = "Waived"
       countertopFee.value = "Waived";
       mobileIntegratedFee.value = "Waived";
