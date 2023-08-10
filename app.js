@@ -575,3 +575,43 @@ function copyAddress() {
        accountNameFeeInput.value = accountNameInput.value;
      }
    }
+
+
+
+
+
+
+
+
+
+
+//
+// ADD MOTO % functionality
+//
+// attach a bunch of events to both inputs to handle any kind of input change
+['change', 'keyup', 'paste'].forEach(function(event) {
+
+  // .bind here essentially serves to pass reference of the current updated input, and the other input wich will update
+	cardPresent.addEventListener(event, onPercentageChange.bind(null, cardPresent, cardNotPresent));
+  cardNotPresent.addEventListener(event, onPercentageChange.bind(null, cardNotPresent, cardPresent));
+});
+
+function onPercentageChange(updatedInput, otherInput) {
+
+  var updatedValue = parseInt(updatedInput.value) || 0;
+
+  otherInput.value = 100 - updatedValue + "%";
+}
+
+
+function moveCursorBeforePercent() {
+  var inputField = document.getElementById("cardPresent");
+  if (inputField.value === '') {
+    inputField.value = "%";
+  }
+
+  // Use setTimeout to set the cursor position after a short delay
+  setTimeout(function() {
+    inputField.setSelectionRange(0, 0);
+  }, 10);
+}
