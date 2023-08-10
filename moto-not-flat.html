@@ -1,0 +1,2488 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Not Flat Rate</title>
+
+  <!-- Bootstrap Scripts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu&display=swap" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+
+  <section class="main">
+    <div class="container-fluid">
+
+      <!-- Nav Bar logo -->
+      <nav class="navbar navbar-expand-lg  navbar-dark dark-part">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/eftposlogo.png" width="25%" alt="">
+        </a>
+      </nav>
+      <br>
+      <div class="title">
+
+        <h1 class="title-text">Application for a Merchant Facility - NOT FLAT RATE</h1>
+
+      </div>
+
+
+      <form class="item  was-validated" id="form" action="https://au.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=592c4ea6-627e-4737-9956-272507c24342&env=au&acct=a6617298-2334-4646-be76-2e20912a1a3d&v=2" method="POST">
+
+
+        <div class="box">
+
+          <div class="form-group">
+            <label></label>
+            <input type="hidden" class="form-control" name="basic" value="1" required>
+          </div>
+
+          <div class="form-group ">
+            <label>What product are you applying for?</label>
+            <select class="form-control" name="product" required>
+              <option value="">-</option>
+              <option value="EFTPOS">EFTPOS</option>
+              <option value="Integrated POS">Integrated POS</option>
+              <option value="EFTPOS & IPOS">EFTPOS & IPOS</option>
+            </select>
+            <div class="invalid-feedback">Select an option from the dropdown menu</div>
+          </div>
+
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Business Details:
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="title-form">
+                    <h5>Business Details:</h5>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Merchant Trading Name:</label>
+                    <input type="text" class="form-control" name="merchantName" required>
+                    <div class="invalid-feedback">Please fill out this field </div>
+                    <small class="form-text text-muted">(Name that appear above the door/ t/a "xxxxxxxxxxxx". Should be the same as the Name to Appear on Receipts)</small>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>Legal Entity Name:</label>
+                    <input type="text" class="form-control" name="entityName" value="" required>
+                    <div class="invalid-feedback">Please fill out this field </div>
+
+                    <small class="form-text text-muted">Write the full Legal Entity Name e.g.: John Smith or ABC Pty Ltd or John Smith as trustee for the Smith Family Trust. <br> Don't write the Trading Name in this field. <br> Don't include titles
+                      eg Dr,
+                      Mr, Ms in the legal entity name.</small>
+
+                  </div>
+
+                  <div class="form-group">
+                    <label>Name to Appear on Receipt:</label>
+                    <input type="text" class="form-control" name="nameOnReceipt" maxlength="22" value="" required>
+                    <div class="invalid-feedback">Please fill out this field </div>
+
+                    <small class="form-text text-muted">Customers should be familiar with this name if they see it referenced on their receipt. <br>
+                      This should be the name above the door or Merchant Trading name. <br>
+                      Max 22 Characters. Special characters that are NOT permitted are # and ^.</small>
+                  </div>
+                  <hr>
+
+                  <div class="">
+                    <h6>Registered Business Details (“trading as xxxxxx”)
+                    </h6>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Is the Business Name Registered?</label>
+                    <select class="form-control nameRegistered" name="businessNameRegisteredQ" required>
+                      <option value="">-</option>
+                      <option value="Yes- Fillout below">Yes- Fillout below</option>
+                      <option value="No - Complete Legal Entity Details">No - Complete Legal Entity Details</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                    <small class="form-text text-muted">(tap and select)</small>
+                  </div>
+
+
+                  <div class="form-group businessDetails">
+                    <label>Full Registered Business Name:</label>
+                    <input type="text" class="form-control" name="businessName" value="">
+                    <small class="form-text text-muted">(as per the registered business name that appears on the ASIC & Business Name Search)</small>
+                  </div>
+
+                  <div class="form-group businessDetails">
+                    <label>ABN:</label>
+                    <input type="text" pattern="\d{11}" class="form-control" name="abn" value="">
+                    <div class="invalid-feedback">ABN number must be 11 digits.</div>
+
+                  </div>
+
+                  <div class="form-group businessDetails">
+                    <label>Principle Place of Business Address:</label>
+                    <input type="text" class="form-control" name="principlePlaceAddress" value="">
+                  </div>
+
+                  <div class="form-group businessDetails">
+                    <label>Suburb:</label>
+                    <input type="text" class="form-control" name="suburb" value="">
+                  </div>
+
+                  <div class="form-group businessDetails">
+                    <label>State:</label>
+                    <select class="form-control" name="state">
+                      <option>-</option>
+                      <option>NSW</option>
+                      <option>VIC</option>
+                      <option>QLD</option>
+                      <option>WA</option>
+                      <option>SA</option>
+                      <option>TAS</option>
+                      <option>ACT</option>
+                      <option>NT</option>
+                    </select>
+                  </div>
+
+
+                  <div class="form-group businessDetails">
+                    <label>Postcode:</label>
+                    <input type="text" class="form-control" pattern="\d{4}" name="postcode" value="">
+                    <div class="invalid-feedback">Please enter exactly 4 digits</div>
+                  </div>
+
+                  <hr>
+
+                  <div class="">
+                    <h6>Legal Entity Details: (select and complete the details for the legal entity type applicable to your
+                      business)</h6>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>Legal Entity Type:</label>
+                    <select class="form-control" name="legalEntityType" required>
+                      <option value="">-</option>
+                      <option value="Sole Trader">Sole Trader</option>
+                      <option value="Company">Company</option>
+                      <option value="Partnership">Partnership</option>
+                      <option value="Trust">Trust</option>
+                      <option value="Incorporated Association">Incorporated Association</option>
+                      <option value="Registered Co-operative">Registered Co-operative</option>
+                      <option value="Unincorporated Association or Body Corporate">Unincorporated Association or Body Corporate</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>Registered Office Address:</label>
+                    <input type="text" class="form-control" name="registeredOfficeAddress" value="">
+                  </div>
+
+                  <div class="form-group">
+                    <label>Suburb:</label>
+                    <input type="text" class="form-control" name="legalSuburb" value="">
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>State:</label>
+                    <select class="form-control" name="legalState">
+                      <option>-</option>
+                      <option>NSW</option>
+                      <option>VIC</option>
+                      <option>QLD</option>
+                      <option>WA</option>
+                      <option>SA</option>
+                      <option>TAS</option>
+                      <option>ACT</option>
+                      <option>NT</option>
+                    </select>
+                  </div>
+
+
+
+                  <div class="form-group">
+                    <label>Postcode:</label>
+                    <input type="text" pattern="\d{4}" class="form-control" name="legalPostcode" value="">
+                    <div class="invalid-feedback">Please enter exactly 4 digits</div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>Full Company Name:</label>
+                    <input type="text" class="form-control" name="fullCompanyName" value="">
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>ACN:</label>
+                    <input type="text" class="form-control" pattern=".{9,11}" name="acn" value="">
+                    <div class="invalid-feedback">ACN must be between 9 and 11 characters</div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>Trust Name:</label>
+                    <input type="text" class="form-control" name="trustName" value="">
+                  </div>
+
+                  <div class="form-group">
+                    <label>Relationship Manager Name</label>
+                    <input type="text" class="form-control" name="relationshipManagerName" value="" required>
+                    <div class="invalid-feedback">Please fill out this field </div>
+
+                    <small class="form-text text-muted">(MANDATORY FIELD. If this is a Not relationship managed customer, please type N/A)</small>
+
+                  </div>
+
+                  <div class="form-group ">
+                    <label>Is this a change of ownership?</label>
+                    <select class="form-control changeOwner" name="changeOwnership" required>
+                      <option value="">-</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                  </div>
+
+                  <div class="form-group oldTerminal">
+                    <div class="row">
+                      <div class="col">
+                        <h6><small>Merchant Number:</small></h6>
+                        <hr>
+                        <h6><small>No. of Terminals:</small></h6>
+                      </div>
+
+                      <div class="col">
+                        <input type="text" class="form-control" pattern=".{6,}" name="merchantNumber1" value="" placeholder="Merchant Number">
+                        <div class="invalid-feedback">Must be at least 6 characters long</div>
+                        <input type="text" class="form-control" name="terminalNo1" value="" placeholder="No. of Terminals">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" pattern=".{6,}" name="merchantNumber2" value="" placeholder="Merchant Number">
+                        <div class="invalid-feedback">Must be at least 6 characters long</div>
+                        <input type="text" class="form-control" name="terminalNo2" value="" placeholder="No. of Terminals">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" pattern=".{6,}" name="merchantNumber3" value="" placeholder="Merchant Number">
+                        <div class="invalid-feedback">Must be at least 6 characters long</div>
+                        <input type="text" class="form-control" name="terminalNo3" value="" placeholder="No. of Terminals">
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group oldTerminal">
+                    <label>Old terminal collection:</label>
+                    <select class="form-control" name="oldTerminalCollection">
+                      <option>-</option>
+                      <option>Old terminal/s to be picked up at the same address and time as the new install</option>
+                      <option>Old merchant is ready to have the terminal collection at the same time from a different address</option>
+                      <option>The old owner will contact 131155 for termination.</option>
+                    </select>
+                  </div>
+
+                  <!-- accordion item div end -->
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Settlement Account Details -All Merchant Facilities
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="title-form ">
+                    <h5>Settlement Account Details -All Merchant Facilities</h5>
+                  </div>
+
+
+
+                  <div class="form-group">
+                    <div class="row">
+                      <label>Please provide BSB & Account Number</label>
+                      <div class="col">
+                        <input type="text" class="form-control" name="bsb" value="" placeholder="BSB" required>
+                        <div class="invalid-feedback">Please fill out this field </div>
+
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" pattern="[a-zA-Z0-9]{6,9}" name="accNumber" value="" placeholder="Account Number" required>
+                        <div class="invalid-feedback">Account number must be 6-9 characters</div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div class="form-group">
+                    <label>Account Name:</label>
+                    <input type="text" class="form-control" name="accountName" value="" required>
+                    <div class="invalid-feedback">Please fill out this field </div>
+                    <small>Enter the Acc. Name for the Acc. the merchant would like the funds to be settled.<br>
+                      Acc. Name should resemble the merchant facility name i.e the Legal entity/Trading name.</small>
+                  </div>
+
+
+                  <div class="form-group ">
+                    <label>Is the Fee/Rebate Account different from the settlement account? </label>
+                    <select class="form-control feeQ" name="feeAccountDifferentQ" required onchange="copyBank()">
+                      <option value="">-</option>
+                      <option value="Yes">Yes, different</option>
+                      <option value="No">No, the same</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                  </div>
+
+
+                  <div class="form-group feeHide">
+                    <div class="row">
+                      <label>Please proceed to check note below</label>
+                      <div class="col">
+                        <input type="text" class="form-control" name="bsbFee" value="" placeholder="BSB">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" pattern="[a-zA-Z0-9]{6,9}" name="accNumberFee" value="" placeholder="Account Number">
+                        <div class="invalid-feedback">Account number must be 6-9 characters</div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div class="form-group feeHide">
+                    <label>Account Name: <br />
+                      (Fee/Rebate Account)</label>
+                    <input type="text" class="form-control" name="accountNameFee" value="">
+                    <div class="invalid-feedback">Please fill out this field </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Business Contact Details
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+
+
+                  <div class="title-form">
+                    <h5>Business Contact Details:</h5>
+                    <p> The contact person must be authorised on this Facility, available to be contacted by Bambora and available on-site for installation (where applicable). They will be responsible for selecting the Merchant password. Once it has
+                      been
+                      selected, it may only be changed by those who are authorised for FULL Merchant Facility access.</p>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>Contact Name:</label>
+                    <input type="text" class="form-control" name="contactName" value="" required>
+                    <div class="invalid-feedback">Please fill out this field </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <label>Phone:</label>
+                        <input type="text" class="form-control" pattern="[0-9]{10}" name="phoneBusiness" value="" required>
+                        <div class="invalid-feedback">Phone numbers are 10 digits long </div>
+
+                        <small>Include the area code</small>
+                      </div>
+                      <div class="col">
+                        <label>Mobile:</label>
+                        <input type="text" class="form-control " pattern="\+61[0-9]{9}" required onfocus="if(this.value=='') this.value = '+61';" name="mobileBusiness" value="">
+                        <div class="invalid-feedback">Start with +61 followed by 9 digits </div>
+                        <small>Start with +614******** e.g. +61412345678</small>
+                      </div>
+                      <div class="col">
+                        <label>After Hours:</label>
+                        <input type="text" class="form-control" pattern="[0-9]{10}" name="afterHours" value="">
+                        <div class="invalid-feedback">Phone numbers are 10 digits long </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group ">
+                    <label>Do you wish to receive electronic communications?</label>
+                    <select class="form-control wishComm" name="wishElCommunication" required>
+                      <option value="">-</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No ">No</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                    <small>If YES - Ensure customer is aware of the note below.</small>
+                  </div>
+
+                  <div class="commText">
+                    <p>By selecting yes, you agree to receive merchant statements, letter of offer, terms and conditions, merchant user guide and or any other contract documentation or correspondence relating to your Merchant Facility with Suncorp
+                      electronically to the email address specified in this Form, unless otherwise agreed.</p>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>E-mail:</label>
+                    <input type="email" placeholder="example@domain.com" class="form-control" name="email" value="">
+                    <div class="invalid-feedback">Please enter a valid email in the format example@domain.com</div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>Communication Password:</label>
+                    <input type="text" pattern="^(?!.*(.)\1{1,})((?!(\d{6}|\d{8}|\d{10}|[A-Za-z]{3,})).)*(?<!.*\b(?:FIRSTNAME|LASTNAME|NICKNAME)\b)[A-Z0-9]{6,10}$" class="form-control" name="commPassword" value="">
+                    <div class="invalid-feedback">Password must be 6-10 characters long, contain only UPPERCASE letters and/or DIGITS, and not be a numeric code that represents your DOB, your driver's license #, or a recognizable part of your name
+                    </div>
+                    <small>Must be 6-10 characters long. <br>
+                      Letters are always in CAPITALS and no case sensitive. <br>
+                      It cannot be: <br>
+                      * A numeric code that represents your DOB <br>
+                      * You driver's license # <br>
+                      * A series of consecutive or the same Number <br>
+                      * A recognizable part of your name </small>
+                  </div>
+
+
+
+                  <div class="form-group">
+                    <label>Website:</label>
+                    <input type="text" class="form-control" name="website" value="">
+                    <div class="invalid-feedback">Please enter a valid website URL starting with 'www', or with 'http://' or 'https://'. Example: https://www.example.com or www.example.com </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Trading Hours and Settlement Preferences
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                  <div class="title-form">
+                    <h5>Trading Hours and Settlement Preferences:</h5>
+                  </div>
+
+                  <div class="form-group">
+                    <p>Trading Hours:</p>
+                    <div class="row">
+                      <h6>Earliest: 24 hour clock:</h6>
+                      <div class="col">
+                        <label>Hours:</label>
+                        <select class="form-control" name="earliestHours" required>
+                          <option value="">-</option>
+                          <option value="01">01</option>
+                          <option value="02">02</option>
+                          <option value="03">03</option>
+                          <option value="04">04</option>
+                          <option value="05">05</option>
+                          <option value="06">06</option>
+                          <option value="07">07</option>
+                          <option value="08">08</option>
+                          <option value="09">09</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+                          <option value="16">16</option>
+                          <option value="17">17</option>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                          <option value="22">22</option>
+                          <option value="23">23</option>
+                          <option value="00">00</option>
+                        </select>
+                        <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                      </div>
+
+                      <div class="col">
+                        <label>Minutes:</label>
+                        <select class="form-control" name="earliestMinutes" required>
+                          <option value="">-</option>
+                          <option value="00">00</option>
+                          <option value="05">05</option>
+                          <option value="10">10</option>
+                          <option value="15">15</option>
+                          <option value="20">20</option>
+                          <option value="25">25</option>
+                          <option value="30">30</option>
+                          <option value="35">35</option>
+                          <option value="40">40</option>
+                          <option value="45">45</option>
+                          <option value="50">50</option>
+                          <option value="55">55</option>
+                        </select>
+                        <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="form-group  ">
+                    <div class="row">
+                      <h6>Latest: 24 hour clock:</h6>
+                      <div class="col">
+                        <label>Hours:</label>
+                        <select class="form-control" name="latestHours" required>
+                          <option value="">-</option>
+                          <option value="01">01</option>
+                          <option value="02">02</option>
+                          <option value="03">03</option>
+                          <option value="04">04</option>
+                          <option value="05">05</option>
+                          <option value="06">06</option>
+                          <option value="07">07</option>
+                          <option value="08">08</option>
+                          <option value="09">09</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+                          <option value="16">16</option>
+                          <option value="17">17</option>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                          <option value="22">22</option>
+                          <option value="23">23</option>
+                          <option value="00">00</option>
+                        </select>
+                        <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                      </div>
+
+                      <div class="col">
+                        <label>Minutes:</label>
+                        <select class="form-control" name="latestMinutes" required>
+                          <option value="">-</option>
+                          <option value="00">00</option>
+                          <option value="05">05</option>
+                          <option value="10">10</option>
+                          <option value="15">15</option>
+                          <option value="20">20</option>
+                          <option value="25">25</option>
+                          <option value="30">30</option>
+                          <option value="35">35</option>
+                          <option value="40">40</option>
+                          <option value="45">45</option>
+                          <option value="50">50</option>
+                          <option value="55">55</option>
+                        </select>
+                        <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div class="form-group  ">
+                    <label>Settlement Options:
+                    </label>
+                    <select class="form-control" name="settlementOptions" required>
+                      <option value="">-</option>
+                      <option value="Manual">Manual</option>
+                      <option value="Auto">Auto</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                  </div>
+
+
+                  <div class="form-group ">
+                    <div class="row">
+                      <h6>Settlement Time:</h6>
+                      <small>(Must be between 00:01 and 21:00 AEST Brisbane time)</small>
+                      <div class="col">
+                        <label>Hours:</label>
+                        <select class="form-control" name="settlementHours">
+                          <option value="">-</option>
+                          <option value="01">01</option>
+                          <option value="02">02</option>
+                          <option value="03">03</option>
+                          <option value="04">04</option>
+                          <option value="05">05</option>
+                          <option value="06">06</option>
+                          <option value="07">07</option>
+                          <option value="08">08</option>
+                          <option value="09">09</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+                          <option value="16">16</option>
+                          <option value="17">17</option>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                          <option value="22">22</option>
+                          <option value="23">23</option>
+                          <option value="00">00</option>
+                        </select>
+                      </div>
+
+                      <div class="col">
+                        <label>Minutes:</label>
+                        <select class="form-control" name="settlementMinutes">
+                          <option value="">-</option>
+                          <option value="00">00</option>
+                          <option value="05">05</option>
+                          <option value="10">10</option>
+                          <option value="15">15</option>
+                          <option value="20">20</option>
+                          <option value="25">25</option>
+                          <option value="30">30</option>
+                          <option value="35">35</option>
+                          <option value="40">40</option>
+                          <option value="45">45</option>
+                          <option value="50">50</option>
+                          <option value="55">55</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Business Type and Location
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+
+                  <div class="title-form ">
+                    <h5>Business Type and Location:</h5>
+                  </div>
+
+
+
+                  <div class="form-group">
+                    <label>Merchant Category Code (MCC):</label>
+                    <input "width:500px; height:30px;" type="text" class="form-control" onchange="showHighRiskComments()" name="mcc" list="mcc" placeholder="Start typing or choose from the dropdown" value="" required>
+                    <datalist id="mcc">
+                      <option value="0742 - LOW - VETERINARY SERVICES">
+                      <option value="0763 - LOW - AGRICULTURAL CO-OPERATIVES">
+                      <option value="0780 - LOW - LANDSCAPE/HORTICULTURAL SERVICES">
+                      <option value="1520 - LOW - GENERAL CONTRACTORS RESIDENTIAL/COMMERCIAL">
+                      <option value="1711 - LOW - HEATING/PLUMBING AND AIR CONDITIONING CONTRACTORS">
+                      <option value="1731 - LOW - ELECTRICAL CONTRACTORS">
+                      <option value="1740 - LOW - MASONRY/TILE/PLASTER/INSULATION CONTRACTORS">
+                      <option value="1750 - LOW - CARPENTRY CONTRACTORS">
+                      <option value="1761 - LOW - ROOFING/SIDING/SHEET METAL CONTRACTORS">
+                      <option value="1771 - HIGH - CONTRACTORS - CONCRETE">
+                      <option value="1799 - LOW - CONTRACTORS-SPECIAL TRADE - (NOT CLASSIFIED ELSEWHERE)">
+                      <option value="2741 - UNACCEPTABLE - MISCELLANEOUS PUBLISHING & PRINTING">
+                      <option value="2791 - LOW - TYPESETTING/PLATE MAKING ETC">
+                      <option value="2842 - LOW - SPECIALTY CLEANING/POLISHING">
+                      <option value="3006 - UNACCEPTABLE - JAL">
+                      <option value="3008 - UNACCEPTABLE - LUFTHANSA">
+                      <option value="3012 - UNACCEPTABLE - QANTAS">
+                      <option value="3025 - UNACCEPTABLE - AIR NZ">
+                      <option value="3026 - UNACCEPTABLE - EMIRATES AIRLINES">
+                      <option value="3030 - UNACCEPTABLE - AERO ARGENT">
+                      <option value="3034 - UNACCEPTABLE - ETIHADAIR">
+                      <option value="3075 - UNACCEPTABLE - SINGAPORE AIR">
+                      <option value="3077 - UNACCEPTABLE - THAI AIRWAYS">
+                      <option value="3079 - UNACCEPTABLE - JETSTAR AIRWAYS">
+                      <option value="3082 - UNACCEPTABLE - KOREAN AIR">
+                      <option value="3084 - UNACCEPTABLE - EVA AIRWAYS">
+                      <option value="3098 - UNACCEPTABLE - ASIANA AIRLINES">
+                      <option value="3099 - UNACCEPTABLE - CATHAYPACAIR">
+                      <option value="3100 - UNACCEPTABLE - MALAY AIR">
+                      <option value="3103 - UNACCEPTABLE - GARUDA AIR">
+                      <option value="3146 - UNACCEPTABLE - LUXAIR">
+                      <option value="3206 - UNACCEPTABLE - CHINA EASTERN AIRLINES">
+                      <option value="3228 - UNACCEPTABLE - CAYMANAIR">
+                      <option value="3247 - UNACCEPTABLE - GOL AIRLINES">
+                      <option value="3261 - UNACCEPTABLE - AIR CHINA">
+                      <option value="3287 - UNACCEPTABLE - AEROCOACHAV">
+                      <option value="3351 - UNACCEPTABLE - AFFILIATED AUTO RENTAL">
+                      <option value="3357 - UNACCEPTABLE - HERTZ RENT-A-CAR">
+                      <option value="3366 - UNACCEPTABLE - BUDGET RENT-A-CAR">
+                      <option value="3368 - UNACCEPTABLE - HOLIDAY RENT-A-CAR">
+                      <option value="3381 - UNACCEPTABLE - EUROP CAR">
+                      <option value="3386 - UNACCEPTABLE - SHOWCASE RENTAL CARS">
+                      <option value="3389 - UNACCEPTABLE - AVIS RENT-A-CAR">
+                      <option value="3393 - UNACCEPTABLE - NATIONAL CAR RENTAL">
+                      <option value="3395 - UNACCEPTABLE - THRIFTY CAR RENTAL">
+                      <option value="3409 - UNACCEPTABLE - GENERAL RENT-A-CAR">
+                      <option value="3412 - UNACCEPTABLE - A-1 RENT-A-CAR">
+                      <option value="3425 - UNACCEPTABLE - AUTOMATE">
+                      <option value="3435 - UNACCEPTABLE - VALUE RENT-A-CAR">
+                      <option value="3438 - UNACCEPTABLE - INTERENT">
+                      <option value="3501 - LOW - HOLIDAY INN">
+                      <option value="3502 - LOW - BEST WESTERN">
+                      <option value="3228 - UNACCEPTABLE - CAYMANAIR">
+                      <option value="3247 - UNACCEPTABLE - GOL AIRLINES">
+                      <option value="3261 - UNACCEPTABLE - AIR CHINA">
+                      <option value="3287 - UNACCEPTABLE - AEROCOACHAV">
+                      <option value="3351 - UNACCEPTABLE - AFFILIATED AUTO RENTAL">
+                      <option value="3357 - UNACCEPTABLE - HERTZ RENT-A-CAR">
+                      <option value="3366 - UNACCEPTABLE - BUDGET RENT-A-CAR">
+                      <option value="3368 - UNACCEPTABLE - HOLIDAY RENT-A-CAR">
+                      <option value="3381 - UNACCEPTABLE - EUROP CAR">
+                      <option value="3386 - UNACCEPTABLE - SHOWCASE RENTAL CARS">
+                      <option value="3389 - UNACCEPTABLE - AVIS RENT-A-CAR">
+                      <option value="3393 - UNACCEPTABLE - NATIONAL CAR RENTAL">
+                      <option value="3395 - UNACCEPTABLE - THRIFTY CAR RENTAL">
+                      <option value="3409 - UNACCEPTABLE - GENERAL RENT-A-CAR">
+                      <option value="3412 - UNACCEPTABLE - A-1 RENT-A-CAR">
+                      <option value="3425 - UNACCEPTABLE - AUTOMATE">
+                      <option value="3435 - UNACCEPTABLE - VALUE RENT-A-CAR">
+                      <option value="3438 - UNACCEPTABLE - INTERENT">
+                      <option value="3501 - LOW - HOLIDAY INN">
+                      <option value="3502 - LOW - BEST WESTERN">
+                      <option value="3503 - LOW - SHERATON">
+                      <option value="3504 - LOW - HILTON">
+                      <option value="3508 - LOW - QUALITY INN">
+                      <option value="3509 - LOW - MARRIOTT">
+                      <option value="3512 - LOW - INTER-CONTINENTAL">
+                      <option value="3519 - LOW - PULLMAN INTERNATIONAL HOTELS">
+                      <option value="3528 - LOW - THUNDERBIRD/RED LION">
+                      <option value="3533 - LOW - HOTEL IBIS">
+                      <option value="3535 - LOW - HILTON INTERNATIONAL">
+                      <option value="3537 - LOW - ANA HOTELS">
+                      <option value="3542 - LOW - ROYAL HOTELS">
+                      <option value="3544 - LOW - CIGAHOTELS">
+                      <option value="3562 - LOW - COMFORT INN">
+                      <option value="3579 - LOW - HOTEL MERCURE">
+                      <option value="3595 - LOW - HOSPITALITY INNS">
+                      <option value="3612 - LOW - MOEVENPICK HOTELS">
+                      <option value="3615 - LOW - TRAVELODGE">
+                      <option value="3635 - LOW - RESO HOTELS">
+                      <option value="3640 - LOW - HYATT">
+                      <option value="3641 - LOW - SOFITEL HOTELS">
+                      <option value="3642 - LOW - NOVOTEL">
+                      <option value="3649 - LOW - RADISSON HOTEL">
+                      <option value="3652 - LOW - EMBASSY HOTELS">
+                      <option value="3661 - LOW - METROPOLE HOTELS">
+                      <option value="3690 - LOW - COURTYARD BY MARRIOTT">
+                      <option value="3692 - LOW - DOUBLETREE HOTEL">
+                      <option value="3695 - LOW - EMBASSY SUITES">
+                      <option value="3700 - LOW - MOTEL 6">
+                      <option value="3701 - LOW - LA MANSION DEL RIO">
+                      <option value="3704 - LOW - ROYCE HOTEL">
+                      <option value="3714 - LOW - FOUR SEASONS (AUSTRALIA)">
+                      <option value="3716 - LOW - CARLTON HOTELS">
+                      <option value="3717 - LOW - CITY LODGE HOTELS">
+                      <option value="3722 - LOW - WYNDHAM">
+                      <option value="3736 - LOW - COLORADO BELLE/EDGEWATER RSORT">
+                      <option value="3747 - LOW - CLUBCORP/CLUBRESORTS">
+                      <option value="3749 - LOW - THE BEVERLY HILLS HOTEL">
+                      <option value="3750 - LOW - CROWNE PLAZA HOTELS">
+                      <option value="3755 - LOW - THE HOMESTEAD">
+                      <option value="3763 - LOW - CHATEAU ELAN WINERY AND RESORT">
+                      <option value="3778 - LOW - FOUR POINTS HOTELS">
+                      <option value="3779 - LOW - W HOTELS">
+                      <option value="3785 - LOW - OUTRIGGER HOTELS AND RESORTS">
+                      <option value="3824 - LOW - ARIA">
+                      <option value="4011 - HIGH - RAILROADS">
+                      <option value="4111 - LOW - LOCAL COMMUTER TRANSPORT">
+                      <option value="4112 - HIGH - PASSENGER RAILWAYS">
+                      <option value="4119 - LOW - AMBULANCE SERVICES">
+                      <option value="4121 - HIGH - TAXICABS/LIMOUSINES">
+                      <option value="4131 - HIGH - BUS LINES">
+                      <option value="4214 - HIGH - MOTOR FREIGHT CARRIERS AND TRUCKING">
+                      <option value="4214 - HIGH - MOVING AND STORAGE COMPANIES">
+                      <option value="4215 - LOW - COURIER SERVICES">
+                      <option value="4225 - HIGH - PUBLIC WAREHOUSING">
+                      <option value="4411 - HIGH - STEAMSHIP/CRUISE LINES">
+                      <option value="4457 - HIGH - BOAT RENTALS & LEASING">
+                      <option value="4468 - HIGH - MARINAS, SERVICE & SUPPLY">
+                      <option value="4511 - UNACCEPTABLE - AIRLINES, AIR CARRIERS, AIR TRANSPORT">
+                      <option value="4582 - LOW - AIRPORTS, AIRPORT TERMINALS AND FLYING FIELDS">
+                      <option value="4722 - HIGH - TRAVEL AGENCIES AND TOUR OPERATORS">
+                      <option value="4784 - LOW - TOLLS AND BRIDGE FEES">
+                      <option value="4789 - LOW - TRANSPORTATION SERVICES - (NOT CLASSIFIED ELSEWHERE)">
+                      <option value="4812 - LOW - TELECOMMUNICATION EQUIPMENT">
+                      <option value="4814 - UNACCEPTABLE - TELECOMMUNICATION SERVICES, INCLUDING LOCAL AND LONG DISTANCE CALLS/CREDIT CARD CALLS/CALLS THROUGH USE OF MAG STRIPE READING TELEPHONES AND FAX SERVICES">
+                      <option value="4816 - UNACCEPTABLE - COMPUTER NETWORK/INFORMATION SERVICES">
+                      <option value="4821 - HIGH - TELEGRAPH SERVICES">
+                      <option value="4829 - UNACCEPTABLE - WIRE TRANSFER MONEY ORDER">
+                      <option value="4899 - LOW - CABLE SATELLITE AND OTHER PAY TELEVISION AND RADIO SERVICES">
+                      <option value="4900 - LOW - UTILITIES/ELECTRIC/GAS/WATER/SANITARY">
+                      <option value="5013 - LOW - MOTOR VEHICLE SUPPLY/NEW PARTS">
+                      <option value="5021 - LOW - OFFICE AND COMMERCIAL FURNITURE">
+                      <option value="5039 - HIGH - CONSTRUCTION MATERIALS - (NOT CLASSIFIED ELSEWHERE)">
+                      <option value="5044 - LOW - PHOTOGRAPHIC/PHOTOCOPY/MICROFILM EQUIPMENT AND SUPPLIES">
+                      <option value="5045 - UNACCEPTABLE - COMPUTERS/PERIPHERALS/SOFTWARE">
+                      <option value="5046 - LOW - COMMERCIAL EQUIPMENT - (NOT CLASSIFIED ELSEWHERE)">
+                      <option value="5047 - LOW - DENTAL/LABORATORY/MEDICAL EQUIPMENT AND SUPPLIES">
+                      <option value="5051 - LOW - METAL SERVICE CENTERS">
+                      <option value="5065 - LOW - ELECTRICAL PARTS/EQUIPMENT">
+                      <option value="5072 - LOW - HARDWARE EQUIPMENT/SUPPLIES">
+                      <option value="5074 - LOW - PLUMBING/HEATING EQUIPMENT">
+                      <option value="5085 - LOW - INDUSTRIAL SUPPLIES - (NOT CLASSIFIED ELSEWHERE)">
+                      <option value="5094 - HIGH - PRECIOUS STONES/METALS/JEWELRY">
+                      <option value="5099 - LOW - DURABLE GOODS - (NOT ELSEWHERE CLASSIFIED)">
+                      <option value="5111 - LOW - STATIONERY/OFFICE SUPPLIES">
+                      <option value="5122 - LOW - DRUGS/DRUGGISTS SUNDRIES">
+                      <option value="5131 - LOW - PIECE GOODS/NOTIONS/DRY GOODS">
+                      <option value="5137 - LOW - UNIFORMS & COMMERCIAL CLOTHING">
+                      <option value="5139 - LOW - COMMERCIAL FOOTWEAR">
+                      <option value="5169 - LOW - CHEMICALS/ALLIED PRODUCTS (NOT CLASSIFIED ELSEWHERE)">
+                      <option value="5172 - HIGH - PETROLEUM/PETROLEUM PRODUCTS">
+                      <option value="5192 - HIGH - BOOKS/PERIODICALS/NEWSPAPERS">
+                      <option value="5193 - LOW - FLORIST SUPPLIES/NURSERY STOCK">
+                      <option value="5198 - LOW - PAINT, VARNISHES & SUPPLIES">
+                      <option value="5199 - LOW - NON-DURABLE GOODS - (NOT CLASSIFIED ELSEWHERE)">
+                      <option value="5200 - LOW - HOME SUPPLY WAREHOUSE STORES">
+                      <option value="5211 - LOW - LUMBER AND BUILDING MATERIAL STORES">
+                      <option value="5231 - LOW - GLASS/PAINT/WALLPAPER STORES">
+                      <option value="5251 - LOW - HARDWARE STORES">
+                      <option value="5261 - LOW - NURSERIES, LAWN/GARDEN SUPPLY">
+                      <option value="5271 - LOW - MOBILE HOME DEALERS">
+                      <option value="5300 - HIGH - WHOLESALE CLUBS">
+                      <option value="5309 - HIGH - DUTY FREE STORES">
+                      <option value="5310 - LOW - DISCOUNT STORES">
+                      <option value="5311 - LOW - DEPARTMENT STORES">
+                      <option value="5331 - LOW - VARIETY STORES">
+                      <option value="5399 - LOW - MISCELLANEOUS GENERAL MERCHANDISE">
+                      <option value="5411 - LOW - GROCERY STORES/SUPERMARKETS">
+                      <option value="5422 - LOW - FREEZER/MEAT LOCKERS">
+                      <option value="5422 - LOW - BUTCHERS">
+                      <option value="5441 - LOW - CANDY/NUT/CONFECTION STORES">
+                      <option value="5451 - LOW - DAIRY PRODUCT STORES">
+                      <option value="5462 - LOW - BAKERIES">
+                      <option value="5499 - LOW - DELICATESSENS">
+                      <option value="5499 - LOW - FRUIT AND VEGETABLE STORES">
+                      <option value="5499 - LOW - MISCELLANEOUS FOOD STORES-CONVENIENCE STORES AND SPECIALTY MARKETS">
+                      <option value="5511 - HIGH - CAR & TRUCK DEALERS/NEW/USED-SALES/SERVICE/REPAIRS/PARTS AND LEASING">
+                      <option value="5521 - HIGH - CAR & TRUCK DEALERS/USED ONLY">
+                      <option value="5532 - HIGH - AUTOMOTIVE TYRE STORES">
+                      <option value="5533 - HIGH - AUTOMOTIVE PARTS STORES">
+                      <option value="5541 - HIGH - SERVICE STATIONS">
+                      <option value="5542 - LOW - AUTOMATED FUEL DISPENSERS">
+                      <option value="5551 - LOW - BOAT DEALERS">
+                      <option value="5561 - LOW - CAMPER TRAILER DEALER">
+                      <option value="5571 - HIGH - MOTORCYCLE DEALERS">
+                      <option value="5592 - LOW - MOTOR HOME DEALERS">
+                      <option value="5599 - LOW - MISCELLANEOUS AUTOMOTIVE/AIRCRAFT AND FARM EQUIPMENT DEALERS (NOT ELSEWHERE CLASSIFIED)">
+                      <option value="5611 - LOW - CLOTHING-MEN/BOYS CLOTHING/ACC STORES">
+                      <option value="5621 - LOW - WOMENS READY TO WEAR STORES">
+                      <option value="5631 - LOW - WOMENS ACCESSORY/SPECIALTY STORES">
+                      <option value="5641 - LOW - CLOTHING-CHILDREN/INFANTS WEAR STORES">
+                      <option value="5651 - LOW - CLOTHING-FAMILY CLOTHING STORES">
+                      <option value="5655 - LOW - SPORTS/RIDING APPAREL STORES">
+                      <option value="5661 - LOW - SHOE STORES">
+                      <option value="5681 - LOW - FURRIERS AND FUR SHOPS">
+                      <option value="5691 - LOW - MENS/WOMENS CLOTHING STORES">
+                      <option value="5697 - LOW - ALTERATIONS AND MENDING, TAILORS AND SEAMSTRESSES">
+                      <option value="5698 - LOW - WIG AND TOUPEE STORES">
+                      <option value="5699 - LOW - ACCESSORY & APPAREL STORES-MISCELLANEOUS">
+                      <option value="5712 - LOW - FURNITURE /HOME FURNISHINGS AND EQUIPMENT STORES (NOT APPLIANCES)">
+                      <option value="5713 - LOW - CARPET STORES">
+                      <option value="5713 - LOW - FLOOR COVERING STORES">
+                      <option value="5714 - LOW - DRAPERY & UPHOLSTERY STORES">
+                      <option value="5718 - LOW - FIREPLACES & ACCESSORIES">
+                      <option value="5719 - LOW - MISCELLANEOUS HOME FURNISHING SPECIALTY STORES">
+                      <option value="5722 - LOW - HOUSEHOLD APPLIANCE STORES">
+                      <option value="5732 - HIGH - ELECTRONICS STORES">
+                      <option value="5733 - LOW - MUSIC STORES/PIANOS">
+                      <option value="5734 - HIGH - COMPUTER SOFTWARE STORES">
+                      <option value="5735 - LOW - RECORD STORES">
+                      <option value="5811 - HIGH - CATERERS">
+                      <option value="5812 - LOW - RESTAURANTS AND EATING PLACES">
+                      <option value="5813 - LOW - BARS/TAVERNS/NIGHTCLUBS/COCKTAIL LOUNGES AND DISCOTHEQUES">
+                      <option value="5813 - LOW - WINE BARS">
+                      <option value="5814 - LOW - FAST FOOD RESTAURANTS">
+                      <option value="5912 - LOW - PHARMACIES">
+                      <option value="5921 - LOW - LIQUOR STORES">
+                      <option value="5931 - LOW - USED MERCHANDISE STORES">
+                      <option value="5932 - HIGH - ANTIQUE SHOPS-SALES/REPAIRS AND RESTORATION SERVICES">
+                      <option value="5933 - HIGH - PAWN SHOPS">
+                      <option value="5935 - LOW - WRECKING SALVAGE YARDS">
+                      <option value="5937 - HIGH - ANTIQUE REPRODUCTION STORES">
+                      <option value="5940 - LOW - BICYCLE SHOPS/SALES/SERVICE">
+                      <option value="5941 - LOW - SPORTING GOODS STORES">
+                      <option value="5942 - LOW - BOOK STORES">
+                      <option value="5943 - HIGH - STATIONERY STORES">
+                      <option value="5944 - HIGH - JEWELRY STORES/WATCHES/CLOCKS AND SILVERWARE STORES">
+                      <option value="5945 - LOW - HOBBY, TOY & GAME STORES">
+                      <option value="5946 - LOW - CAMERA & PHOTO SUPPLY STORES">
+                      <option value="5947 - LOW - GIFT, CARD, NOVELTY STORES">
+                      <option value="5948 - LOW - LUGGAGE/LEATHER STORES">
+                      <option value="5949 - LOW - FABRIC STORES">
+                      <option value="5950 - LOW - GLASSWARE/CRYSTAL STORES">
+                      <option value="5960 - UNACCEPTABLE - DIRECT MARKETING INSURANCE SVC">
+                      <option value="5962 - UNACCEPTABLE - DIRECT MKTG-TRAVEL RELATED ARR">
+                      <option value="5963 - UNACCEPTABLE - DIRECT SELL/DOOR-TO-DOOR">
+                      <option value="5964 - UNACCEPTABLE - CATALOG MERCHANT">
+                      <option value="5965 - UNACCEPTABLE - COMBINATION CATALOG & RETAIL">
+                      <option value="5966 - UNACCEPTABLE - OUTBOUND TELEMARKETING MERCHNT">
+                      <option value="5967 - UNACCEPTABLE - INBOUND TELEMARKETING MERCHANT">
+                      <option value="5968 - UNACCEPTABLE - CONTINUITY/SUBSCRIPTION MERCHT">
+                      <option value="5969 - UNACCEPTABLE - OTHER DIRECT MARKETERS">
+                      <option value="5970 - LOW - ARTIST SHOPS/CRAFT SHOPS">
+                      <option value="5971 - HIGH - ART DEALERS & GALLERIES">
+                      <option value="5972 - LOW - STAMP & COIN STORES">
+                      <option value="5973 - LOW - RELIGIOUS GOODS STORES">
+                      <option value="5975 - LOW - HEARING AID/SALES/SERVICE">
+                      <option value="5976 - LOW - ORTHOPEDIC GOODS">
+                      <option value="5977 - LOW - COSMETIC STORES">
+                      <option value="5978 - LOW - TYPEWRITER/SALES/SERVICE">
+                      <option value="5983 - LOW - FUEL DEALERS">
+                      <option value="5992 - LOW - FLORISTS">
+                      <option value="5993 - LOW - TOBACCONIST">
+                      <option value="5994 - LOW - NEWS DEALERS/NEWSSTANDS/NEWSAGENTS">
+                      <option value="5995 - LOW - PET STORES/FOOD & SUPPLY">
+                      <option value="5996 - LOW - SWIMMING POOLS/SALES/SERVICE">
+                      <option value="5997 - LOW - ELECTRIC RAZOR STORES/SALE/SERVICE">
+                      <option value="5998 - LOW - TENT AND AWNING SHOPS">
+                      <option value="5999 - LOW - MISCELLANEOUS AND SPECIALITY RETAIL STORES">
+                      <option value="6010 - LOW - FINANCIAL INSTITUTIONS - MANUAL CASH DISPURSEMENTS">
+                      <option value="6011 - LOW - BANKS-AUTOMATED TELLER MACHINES">
+                      <option value="6012 - LOW - BANKS-MERCHANDISE AND SERVICES">
+                      <option value="6051 - UNACCEPTABLE - NON FINANCIAL INSTITUTIONS-FOREIGN CURRENCY/MONEY ORDERS (NOT WIRE TRANSFER) STORED VALUE CARD/LOAD/TRAVELERS CHEQUES">
+                      <option value="6211 - UNACCEPTABLE - SECURITIES BROKERS/DEALERS">
+                      <option value="6300 - LOW - INSURANCE SALES/UNDERWRITING AND PREMIUMS">
+                      <option value="6513 - LOW - REAL EST AGNTS & MGRS RENTALS">
+                      <option value="7011 - LOW - HOTELS/MOTELS/RESORTS/BED AND BREAKFASTS/CENTRAL RESERVATION SERVICES (NOT ELSEWHERE CLASSIFIED)">
+                      <option value="7012 - UNACCEPTABLE - TIMESHARES">
+                      <option value="7032 - LOW - SPORTING/RECREATIONAL CAMPS">
+                      <option value="7033 - LOW - TRAILER PARKS/CAMPGROUNDS">
+                      <option value="7210 - LOW - LAUNDRY/CLEANING/GARMENT SERVICES">
+                      <option value="7211 - LOW - LAUNDRIES-FAMILY/COMMERCIAL">
+                      <option value="7216 - LOW - DRY CLEANERS">
+                      <option value="7217 - LOW - CARPET/UPHOLSTERY CLEANING">
+                      <option value="7221 - HIGH - PHOTO STUDIOS AND PHOTOGRAPHERS">
+                      <option value="7230 - LOW - BEAUTY SALONS/BARBER SHOPS">
+                      <option value="7230 - LOW - HAIRDRESSERS">
+                      <option value="7251 - LOW - SHOE REPAIR/SHINE/HAT CLEAN">
+                      <option value="7261 - LOW - FUNERAL SERVICE/CREMATORIES">
+                      <option value="7273 - UNACCEPTABLE - DATING & ESCORT SERVICES">
+                      <option value="7276 - LOW - TAX PREPARATION SERVICE">
+                      <option value="7277 - HIGH - COUNSELING SERVICE - ALL">
+                      <option value="7278 - HIGH - BUYING AND SHOPPING SERVICES AND CLUBS">
+                      <option value="7296 - LOW - CLOTHING RENTAL-COSTUMES/FORMAL WEAR/UNIFORMS">
+                      <option value="7297 - LOW - MASSAGE PARLORS/BROTHELS">
+                      <option value="7298 - LOW - HEALTH & BEAUTY SPAS">
+                      <option value="7299 - LOW - MISCELLANEOUS PERSONAL SERVICES (NOT ELSEWHERE CLASSIFIED)">
+                      <option value="7311 - UNACCEPTABLE - ADVERTISING SERVICES-NEWSPAPERS">
+                      <option value="7321 - LOW - CONSUMER CREDIT REPORTING AGENCIES">
+                      <option value="7333 - HIGH - COMMERCIAL PHOTO/ART/GRAPHICS">
+                      <option value="7338 - LOW - QUICK COPY/REPRODUCTION AND BLUEPRINTING SERVICES">
+                      <option value="7339 - LOW - STENOGRAPHIC SERVICES">
+                      <option value="7342 - LOW - EXTERMINATING/DISINFECTING SERVICES">
+                      <option value="7349 - LOW - CLEANING/MAINTENANCE/JANITORIAL SERVICES">
+                      <option value="7361 - LOW - EMPLOYMENT/TEMP HELP AGENCIES">
+                      <option value="7372 - UNACCEPTABLE - COMPUTER PROGRAMMING/INTEGRATED SYSTEMS DESIGN/DATA PROCESSING">
+                      <option value="7375 - UNACCEPTABLE - INFORMATION RETRIEVAL SERVICES">
+                      <option value="7379 - HIGH - COMPUTER MAINTENANCE/REPAIR/SERVICE">
+                      <option value="7392 - HIGH - MANAGEMENT/CONSULTING">
+                      <option value="7392 - LOW - PUBLIC RELATIONS SERVICES">
+                      <option value="7393 - LOW - DETECTIVE AGENTS">
+                      <option value="7393 - HIGH - PROTECTIVE SERVICES">
+                      <option value="7394 - LOW - EQUIPMENT/TOOL/FURNITURE AND APPLIANCE RENTAL AND LEASING">
+                      <option value="7395 - LOW - PHOTOFINISH LABORATORIES/DEVELOPING">
+                      <option value="7399 - HIGH - BUSINESS SERVICES (NOT CLASSIFIED ELSEWHERE)">
+                      <option value="7512 - UNACCEPTABLE - AUTOMOBILE RENTAL AGENCY - CAR RENTAL">
+                      <option value="7513 - LOW - TRUCK/UTILITY TRAILER RENTALS">
+                      <option value="7519 - LOW - MOTOR HOME RENTALS">
+                      <option value="7523 - LOW - PARKING LOTS,METERS,GARAGES">
+                      <option value="7531 - HIGH - AUTOMOTIVE BODY REPAIR SHOPS">
+                      <option value="7534 - HIGH - TYRE RETREAD/REPAIR SHOPS">
+                      <option value="7535 - LOW - AUTOMOTIVE PAINT SHOPS">
+                      <option value="7538 - HIGH - AUTOMOTIVE SERVICE SHOPS/NON DEALER">
+                      <option value="7542 - LOW - CAR WASHES">
+                      <option value="7549 - LOW - TOWING SERVICES">
+                      <option value="7622 - HIGH - ELECTRONIC REPAIR SHOPS / RADIO/TV/STEREO REPAIR SHOP">
+                      <option value="7623 - LOW - AIR COND/REFRIGERATION REPAIR SHOP">
+                      <option value="7629 - LOW - ELECTRICAL AND SMALL APPLIANCE REPAIR SHOPS">
+                      <option value="7631 - HIGH - WATCH/CLOCK/JEWELRY REPAIR">
+                      <option value="7641 - LOW - FURNITURE REUPHOLSTERY/REPAIR">
+                      <option value="7692 - LOW - WELDING SERVICES">
+                      <option value="7699 - LOW - MISCELLANEOUS REPAIR SERVICES">
+                      <option value="7829 - LOW - FILMS/VIDEO PRODUCTION/DISTRIBUTION">
+                      <option value="7832 - LOW - MOTION PICTURE THEATRES">
+                      <option value="7841 - LOW - DVD/VIDEO TAPE RENTAL STORES">
+                      <option value="7911 - LOW - DANCE HALLS/STUDIOS/SCHOOLS">
+                      <option value="7922 - HIGH - THEATRICAL PRODUCERS AND TICKET SALES (EVENTS)">
+                      <option value="7929 - HIGH - BANDS/ORCHESTRAS/ENTERTAINERS">
+                      <option value="7932 - HIGH - BILLIARD/POOL ESTABLISHMENT">
+                      <option value="7933 - LOW - BOWLING ALLEYS">
+                      <option value="7941 - HIGH - COMMERCIAL SPORTS/ATHLETIC FIELDS AND SPORTS PROMOTERS">
+                      <option value="7941 - LOW - PROFESSIONAL SPORTS CLUBS">
+                      <option value="7991 - LOW - TOURIST ATTRACTIONS AND EXHIBITS">
+                      <option value="7992 - LOW - PUBLIC GOLF COURSES">
+                      <option value="7993 - HIGH - VIDEO AMUSEMENT GAME SUPPLY">
+                      <option value="7994 - HIGH - VIDEO GAME ARCADES/ESTABLISH">
+                      <option value="7995 - UNACCEPTABLE - BETTING, INCLUDING LOTTERY TICKETS, CASINO GAMING CHIPS, OFF-TRACK BETTING, AND WAGERS AT RACE TRACKS">
+                      <option value="7996 - HIGH - AMUSEMENT PARKS/CIRCUSES/CARNIVALS/FORTUNE TELLERS">
+                      <option value="7997 - LOW - MEMBERSHIP CLUBS (SPORTS/RECREATION/ATHLETIC), COUNTRY CLUBS AND PRIVATE GOLD COURSES">
+                      <option value="7998 - LOW - AQUARIUMS/SEAQUARIUMS">
+                      <option value="7999 - LOW - RECREATION SERVICES (NOT ELSEWHERE CLASSIFIED)">
+                      <option value="8011 - LOW - DOCTORS & PHYSICIANS">
+                      <option value="8021 - LOW - DENTISTS/ORTHODONTISTS">
+                      <option value="8031 - LOW - OSTEOPATHS">
+                      <option value="8041 - LOW - CHIROPRACTORS">
+                      <option value="8042 - LOW - OPTOMETRISTS/OPHTHALMOLOGISTS">
+                      <option value="8043 - LOW - OPTICIANS/OPTICAL GOODS AND EYEGLASSES">
+                      <option value="8049 - LOW - PODIATRISTS/CHIROPODISTS">
+                      <option value="8050 - LOW - NURSING/PERSONAL CARE FACILITIES">
+                      <option value="8062 - LOW - HOSPITALS">
+                      <option value="8071 - LOW - MEDICAL/DENTAL LABORATORIES">
+                      <option value="8099 - LOW - HEALTH PRACTITIONERS/MEDICAL SERVICES (NOT CLASSIFIED ELSEWHERE)">
+                      <option value="8111 - LOW - LEGAL SERVICES ATTORNEYS">
+                      <option value="8211 - HIGH - ELEMENTARY/SECONDARY SCHOOLS">
+                      <option value="8220 - LOW - COLLEGES/UNIVERSITIES/JUNIOR COLLEGES/PROFESSIONAL SCHOOLS">
+                      <option value="8241 - HIGH - CORRESPONDENCE SCHOOLS">
+                      <option value="8244 - HIGH - BUSINESS/SECRETARIAL SCHOOL">
+                      <option value="8249 - HIGH - TRADE/VOCATIONAL SCHOOLS">
+                      <option value="8299 - HIGH - SCHOOLS AND EDUCATIONAL SERVICES (NOT CLASSIFIED ELSEWHERE)">
+                      <option value="8351 - LOW - CHILD CARE SERVICES">
+                      <option value="8398 - LOW - CHARITABLE/SOCIAL SERVICE ORGANISATIONS">
+                      <option value="8641 - LOW - CIVIC/SOCIAL/FRATERNAL ASSOCIATIONS">
+                      <option value="8651 - UNACCEPTABLE - POLITICAL ORGANIZATIONS">
+                      <option value="8661 - LOW - RELIGIOUS ORGANIZATIONS">
+                      <option value="8675 - UNACCEPTABLE - AUTO ASSOCIATIONS">
+                      <option value="8699 - HIGH - MEMBER ORGANIZATIONS - (NOT CLASSIFIED ELSEWHERE)">
+                      <option value="8734 - LOW - TESTING LABS (NON-MEDICAL)">
+                      <option value="8911 - LOW - ARCHITECTURAL/ENGINEERING/SURVEYING SERVICES">
+                      <option value="8931 - LOW - ACCOUNTING, AUDITING AND BOOKKEEPING SERVICES">
+                      <option value="8999 - LOW - PROFESSIONAL SERVICES - (NOT CLASSIFIED ELSEWHERE)">
+                      <option value="9211 - LOW - COURT COSTS, INCLUDING ALIMONY AND CHILD SUPPORT">
+                      <option value="9222 - UNACCEPTABLE - FINES">
+                      <option value="9223 - LOW - BAIL AND BOND PAYMENTS">
+                      <option value="9311 - LOW - TAX PAYMENTS">
+                      <option value="9399 - LOW - GOVERNMENT SERVICES (NOT CLASSIFIED ELSEWHERE)">
+                      <option value="9402 - LOW - POSTAGE STAMPS">
+                      <option value="9405 - LOW - INTRA-GOVERNMENT PURCHASES">
+                      <option value="9406 - LOW - GOVERNMENT-OWNED LOTTERIES">
+                      <option value=" - UNACCEPTABLE - ANY BUSINESSES PERFORMING DOOR TO DOOR SALES">
+                      <option value=" - UNACCEPTABLE - BUSINESSES OPERATING 0055 AND 1900 TELEPHONE NUMBERS">
+                      <option value=" - HIGH - INSULATION MANUFACTURERS, DISTRIBUTORS AND INSTALLERS">
+                      <option value=" - UNACCEPTABLE - INTERNET SERVICE PROVIDERS (ISPS)">
+                      <option value=" - UNACCEPTABLE - MONEY REMITTERS">
+                      <option value=" - UNACCEPTABLE - PHOENIX COMPANIES">
+                      <option value=" - HIGH - RAINWATER TANK MANUFACTURERS, DISTRIBUTORS AND INSTALLERS">
+                      <option value=" - HIGH - SOLAR ENERGY MANUFACTURERS, DISTRIBUTORS AND INSTALLERS">
+                      <option value=" - UNACCEPTABLE - UNREGISTERED CHARITIES">
+                      <option value=" - HIGH - WEIGHT LOSS PROGRAMS OR PRODUCTS">
+                    </datalist>
+                    <div class="invalid-feedback">Start typing or select an option from the dropdown menu</div>
+                  </div>
+
+
+
+                  <div class="form-group">
+                    <label>Nature of Business (please provide details)</label>
+                    <input type="text" class="form-control" name="natureBusiness" value="" required>
+                    <div class="invalid-feedback">Please fill out this field </div>
+                    <small>This needs to reflect what the merchant does/sells. <br>
+                      Don't use the Name to Appear on Receipt. <br>
+                      e.g. Zarraffas is the trading name not the nature of business.</small>
+                  </div>
+
+                  <br>
+
+
+                  <div class="form-group">
+                    <h6>Business/Site Address (where Merchant Facility is located)</h6>
+                    <div class="form-group">
+                      <label>C/o or Building</label>
+                      <input type="text" class="form-control" name="buildingSite" value="">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Street No. & Name</label>
+                      <input type="text" class="form-control" name="streetSite" value="" required>
+                      <div class="invalid-feedback">Please fill out this field </div>
+                      <small>Enter the full physical address of the building including Street Number and Name. <br>
+                        The terminal will only be delivered to this address.</small> <br> <br>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Suburb/Town</label>
+                      <input type="text" class="form-control" name="suburbSite" value="" required>
+                      <div class="invalid-feedback">Please fill out this field </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>State:</label>
+                      <select class="form-control" name="stateSite" required>
+                        <option value="">-</option>
+                        <option value="NSW">NSW</option>
+                        <option value="VIC">VIC</option>
+                        <option value="QLD">QLD</option>
+                        <option value="WA">WA</option>
+                        <option value="SA">SA</option>
+                        <option value="TAS">TAS</option>
+                        <option value="ACT">ACT</option>
+                        <option value="NT">NT</option>
+                      </select>
+                      <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Postcode:</label>
+                      <input type="text" pattern="\d{4}" class="form-control" name="postcodeSite" value="" required>
+                      <div class="invalid-feedback">Please enter exactly 4 digits</div>
+                    </div>
+
+                  </div>
+
+
+                  <div class="form-group ">
+                    <label>Is the Postal address different from Business/Site Address?</label>
+                    <select class="form-control postalAddress" name="postalAddressDif" required onchange="copyAddress()">
+                      <option value="">-</option>
+                      <option value="Yes">Yes, different.</option>
+                      <option value="No">No, the same.</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                  </div>
+
+
+                  <div class="form-group postalAddressHide">
+                    <h6>Postal Address (If different from Business/Site Address)</h6>
+
+                    <div class="form-group">
+                      <label>C/o or Building</label>
+                      <input type="text" class="form-control" name="buildingPostal" value="">
+                    </div>
+
+
+                    <div class="form-group">
+                      <label>Street No. & Name</label>
+                      <input type="text" class="form-control" name="streetPostal" value="">
+                      <div class="invalid-feedback">Please fill out this field </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Suburb/Town</label>
+                      <input type="text" class="form-control" name="suburbPostal" value="">
+                      <div class="invalid-feedback">Please fill out this field </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>State:</label>
+                      <select class="form-control" name="statePostal">
+                        <option value="">-</option>
+                        <option value="NSW">NSW</option>
+                        <option value="VIC">VIC</option>
+                        <option value="QLD">QLD</option>
+                        <option value="WA">WA</option>
+                        <option value="SA">SA</option>
+                        <option value="TAS">TAS</option>
+                        <option value="ACT">ACT</option>
+                        <option value="NT">NT</option>
+                      </select>
+                      <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Postcode:</label>
+                      <input type="text" class="form-control" pattern="\d{4}" name="postcodePostal" value="">
+                      <div class="invalid-feedback">Please enter exactly 4 digits</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSixth">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixth" aria-expanded="false" aria-controls="collapseSixth">
+                  Terms of Trade
+                </button>
+              </h2>
+              <div id="collapseSixth" class="accordion-collapse collapse" aria-labelledby="headingSixth" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+
+                  <div class="title-form ">
+                    <h5>Terms of Trade:</h5>
+                  </div>
+
+
+
+                  <div class="form-group">
+                    <label>How long has business been established and registered for GST?</label>
+                    <select class="form-control" name="howLongEstablished" required>
+                      <option value="">-</option>
+                      <option value="Business established and GST registered for &gt2 years">Business established and GST registered for > 2 years</option>
+                      <option value="Business established and GST registered for &gt1 year">Business established and GST registered for > 1 year
+                      </option>
+                      <option value="Business established and GST registered for &lt2 year">Business established and GST registered for < 1 year</option>
+                      <option value="No ABN and/or No GST Registration">No ABN and/or No GST Registration</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                  </div>
+
+                  <div class="form-group ">
+                    <label>Does your business offer goods or services on a trial basis where credit card details are recorded and used
+                      to process payment at the end of the trial?</label>
+                    <select id="offerTrial" class="offerTrial form-control" name="offerTrialQ" required>
+                      <option value="">-</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                  </div>
+
+                  <div id="trialAlert" class="d-none alert alert-danger d-flex align-items-center" role="alert">
+                    <svg class=" bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+                      <use xlink:href="#exclamation-triangle-fill" />
+                    </svg>
+                    <div>
+                      This is an unacceptable criteria. Please advise the customer the application cannot proceed
+                    </div>
+                  </div>
+
+
+
+                  <div class="form-group">
+                    <label>What is the number of days between receiving payment, and delivery of goods/services?</label>
+                    <input type="text" class="form-control" name="numberBetweenPayment" value="" required>
+                    <div class="invalid-feedback">Please fill out this field </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                  EFTPOS
+                </button>
+              </h2>
+              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                  <div class="title-form ">
+                    <h5> EFTPOS</h5>
+                  </div>
+
+
+                  <div class="subtitle-form ">
+                    <h6> EFTPOS Terminal Requirements</h6>
+                  </div>
+
+                  <div class="form-group ">
+                    <label>Does your terminal have HealthPoint?</label>
+                    <select class="form-control" name="healthPoint" required>
+                      <option value="">-</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                  </div>
+
+                  <div class="form-group ">
+                    <label>Does your terminal have Medicare?</label>
+                    <select class="form-control" name="medicare" required>
+                      <option value="">-</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <label><strong> How many terminal(s) are needed?</strong></label>
+
+                      <div class="col">
+                        <label>GPRS 4G:</label>
+                        <input class="eftposTerminal form-control" type="number" class="form-control" name="gprs">
+
+                      </div>
+                      <div class="col">
+                        <label>WIFI:</label>
+                        <input class="eftposTerminal form-control" type="number" class="form-control " name="wifi">
+                      </div>
+                      <div class="col">
+                        <label>Broadband:</label>
+                        <input class="eftposTerminal form-control" type="number" class="form-control" name="broadband" value="">
+                        <small>(Required if using Healthpoint)</small>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group ">
+                    <label>SIM Provider (GPRS terminals only)</label>
+                    <select class="form-control" name="simProvider">
+                      <option value="">-</option>
+                      <option value="Telstra">Telstra</option>
+                      <option value="Optus">Optus</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group ">
+                    <label>Template Type:</label>
+                    <select class="form-control" name="templateType" required>
+                      <option value="">-</option>
+                      <option value="N/A">N/A</option>
+                      <option value="Retail">Retail</option>
+                      <option value="Restaurant">Restaurant</option>
+                      <option value="HOS (Pre Auth)">HOS (Pre Auth)</option>
+                      <option value="Taxi">Taxi</option>
+                      <option value="Retail (MOTO)">Retail (MOTO)</option>
+                      <option value="Restaurant (MOTO)">Restaurant (MOTO)</option>
+                      <option value="HOS (Pre Auth) (MOTO)">HOS (Pre Auth)(MOTO)</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                    <small>Choose N/A if applying for Integrated POS.</small>
+                  </div>
+
+                  <div class="form-group ">
+                    <label>Software Package:</label>
+                    <select class="form-control" name="softwarePackage" required>
+                      <option value="">-</option>
+                      <option value="N/A">N/A</option>
+                      <option value="Suncorp only">Suncorp only</option>
+                      <option value="Sun + HealthPoint">Sun + HealthPoint</option>
+                      <option value="Sun + HealthPoint + Medicare">Sun + HealthPoint + Medicare</option>
+                      <option value="Sun + Medicare">Sun + Medicare</option>
+                      <option value="Sun + epay">Sun + epay</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                    <small>Choose N/A if applying for Integrated POS.</small>
+                  </div>
+
+                  <div class="form-group">
+                    <label>HealthPoint ID:</label>
+                    <input type="text" placeholder="HealthPoint ID" class="form-control" name="healthPointID1" value="">
+                    <small>For Merchants with HealthPoint software a HealthPoint ID must be provided for each terminal</small>
+                    <input type="text" class="form-control" placeholder="HealthPoint ID" name="healthPointID2" value="">
+                    <small>One HealthPoint ID is required for each physical terminal. <br> If the merchant has requested more than 2 terminals place additional ID's in the Sales Consultant Comments field.</small>
+
+                  </div>
+
+
+                  <div class="form-group ">
+                    <label>I/We authorise the nominated Value Added Service (VAS) Providers to contact me/us in the future.</label>
+                    <select class="form-control" name="authoriseVAS" required>
+                      <option value="">-</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                  </div>
+
+
+                  <div class="form-group ">
+                    <label>Multi Merchant: Will multiple merchants need to use this facility? (e.g. multiple doctors at a surgery, hairdressers at a salon)</label>
+                    <select class="form-control" name="multipleMerchant" required>
+                      <option value="">-</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEight">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  Integrated POS
+                </button>
+              </h2>
+              <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                  <div class="title-form ">
+                    <h5>Integrated POS</h5>
+                  </div>
+
+
+                  <div class="subtitle-form ">
+                    <h6>Integrated Terminal Requirements</h6>
+                  </div>
+                  <hr>
+                  <p><strong>Terminal Rental Fee per Terminal and Terminal requirements</strong></p>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <label><strong>How many terminal(s) are needed?</strong></label>
+                      <div class="col">
+                        <label>Countertop Integrated Terminals <br> (Broadband Communications):</label>
+                        <input class="countertop form-control" type="number" class="form-control" name="countertopTerminal">
+
+                      </div>
+                      <div class="col">
+                        <label>Mobile Integrated- Broadband Comms <br> (Traditional On Premise POS):</label>
+                        <input class="mobile form-control" type="number" class="form-control " name="mobileTerminal">
+                      </div>
+                      <div class="col">
+                        <label>Mobile Integrated-WIFI Comms <br> (Cloud Based POS):</label>
+                        <input class="mobile form-control" type="number" class="form-control" name="mobileWifiTerminal" value="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group ">
+                    <label>Template Type:</label>
+                    <select class="form-control" name="templateTypeIntegrated" required>
+                      <option value="">-</option>
+                      <option value="N/A">N/A</option>
+                      <option value="Integrated POS">Integrated POS</option>
+                      <option value="Integrated POS Restaurant">Integrated POS Restaurant</option>
+                      <option value="Integrated POS Hospitality">Integrated POS Hospitality</option>
+                      <option value="Integrated POS MOTO">Integrated POS MOTO</option>
+                      <option value="Integrated POS Restaurant MOTO">Integrated POS Restaurant MOTO</option>
+                      <option value="Integrated POS Hospitality MOTO">Integrated POS Hospitality MOTO</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                    <small>Choose N/A if applying for EFTPOS.</small>
+                  </div>
+
+                  <div class="form-group ">
+                    <label>Software Package:</label>
+                    <select class="form-control" name="softwarePackageIntegrated" required>
+                      <option value="">-</option>
+                      <option value="N/A">N/A</option>
+                      <option value="Suncorp Only">Suncorp Only</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                    <small>Choose N/A if applying for EFTPOS.</small>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>Software Vendor Name:</label>
+                    <input type="text" class="form-control" name="softwareVendor" value="" required>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                    <small>Type N/A if applying for EFTPOS.</small>
+                  </div>
+
+
+                  <div class="form-group ">
+                    <label>Use existing Linkly user name and password?</label>
+                    <select class="form-control" name="existingLinklyUser" required>
+                      <option value="">-</option>
+                      <option value="N/A">N/A</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                    <div class="invalid-feedback">Please fill out this field </div>
+                    <small>Choose N/A if applying for EFTPOS.</small>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Existing TID -Terminal Identification Number:</label>
+                    <input type="text" class="form-control" name="existingTID" pattern=".{8}" value="">
+                    <div class="invalid-feedback">Input must be exactly 8 characters in length</div>
+
+                  </div>
+
+                  <div class="form-group">
+                    <label>Number of swivel bases required:</label>
+                    <input type="text" class="form-control" name="numberOfSwivel" pattern="[a-zA-Z]*" value="">
+                    <div class="invalid-feedback">Please enter a valid input containing only letters e.g. ONE</div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNine">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                  Financial Data and Fees
+                </button>
+              </h2>
+              <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                  <div class="subtitle-form ">
+                    <h6>Financial Data and Fees:</h6>
+                  </div>
+                  <hr>
+                  <p><strong>Refund limit and count:</strong></p>
+
+
+                  <div class="form-group">
+                    <label>Refund $ limit: (per transaction)</label>
+                    <br>
+                    <small><small>If not required, input must be 0. <br>
+                        Determine the refund limit by multiplying the average transaction by 1.5 <br>
+                        Any refund values greater than $250 (inc Medicare) will require DCA approval and further justification may be required from the approver.</small></small>
+                    <input type="text" class="form-control" name="refundLimit" onfocus="if(this.value=='') this.value = '$';" pattern="^\$[0-9]+$" value="" required>
+                    <div class="invalid-feedback">Please enter a valid input starting with Dollar Sign ($) and following by numbers</div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Reason:</label>
+                    <small><small>(Please provide justification if refund amount limit is greater than $250)</small></small>
+                    <input type="text" class="form-control" name="reasonRefund" value="">
+                  </div>
+
+                  <div class="form-group">
+                    <label>Refund count limit: (# of refund transactions per day)</label>
+                    <br>
+                    <small><small>If not required, input must be 0.</small></small>
+                    <input type="text" class="form-control" name="numberRefundTransactions" pattern="[0-9]*" value="" required>
+                    <div class="invalid-feedback">Please enter a valid input containing only numbers</div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Reason:</label>
+                    <small><small>(Please provide justification if refund count limit is greater than 5)</small></small>
+                    <input type="text" class="form-control" name="reasonNumberRefundTransactions" value="">
+                  </div>
+
+                  <hr>
+                  <p><strong>Average Annual Figures</strong></p>
+
+                  <div class="form-group">
+                    <label>Proposed Card Turnover (annual):</label>
+                    <input type="text" class="form-control" name="cardTurnover" onfocus="if(this.value=='') this.value = '$';" pattern="^\$[0-9]+$" required>
+                    <div class="invalid-feedback">Please enter a valid input starting with Dollar Sign ($) and following by numbers</div>
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingPricing">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePricing" aria-expanded="false" aria-controls="collapsePricing">
+                  Merchant Pricing
+                </button>
+              </h2>
+              <div id="collapsePricing" class="accordion-collapse collapse" aria-labelledby="headingPricing" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                  <div class="title-form">
+                    <h5>Merchant Pricing</h5>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>Promotion Code:</label>
+                    <input "width:500px; height:30px;" type="text" class="form-control" name="promotionCode" list="promotionCode" placeholder="Type or choose from the dropdown" value="">
+                    <datalist id="promo">
+                      <option value="3KBACK">
+                    </datalist>
+                  </div>
+
+
+
+                  <div class="form-group ">
+                    <label>Pricing</label>
+                    <select id="pricing" class="form-control pricingHighRisk" name="pricing" onchange="showPricing()" required>
+                      <option value="">--Please choose an option--</option>
+                      <option value="ARAMA Members">ARAMA Members</option>
+                      <option value="Boost Juice">Boost Juice</option>
+                      <option value="Cafés">Cafés</option>
+                      <option value="Coffee Shops">Coffee Shops</option>
+                      <option value="Convenience Stores">Convenience Stores</option>
+                      <option value="Discount Stores">Discount Stores</option>
+                      <option value="Dominos">Dominos</option>
+                      <option value="Fruit &amp; Veg Shops">Fruit &amp; Veg Shops</option>
+                      <option value="Gloria Jeans">Gloria Jeans</option>
+                      <option value="Go Vita and other Health Food Stores">Go Vita and other Health Food Stores</option>
+                      <option value="Newsagencies (Non Membership)">Newsagencies (Non Membership)</option>
+                      <option value="Newsagencies ALNA members">Newsagencies ALNA members</option>
+                      <option value="Pizza Hut">Pizza Hut</option>
+                      <option value="Pricing approved by Product">Pricing approved by Product</option>
+                      <option value="Real Estate Agencies">Real Estate Agencies</option>
+                      <option value="Registered Charities or Not for Profit Organisations">Registered Charities or Not for Profit Organisations</option>
+                      <option value="Restaurants">Restaurants</option>
+                      <option value="Takeaway Food">Takeaway Food</option>
+                      <option value="Taxis">Taxis</option>
+                    </select>
+                  </div>
+
+                  <div class="subtitle-form ">
+                    <h6>Terminal Rental Fee (Charged per terminal per month)</h6>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <label>Mobile EFTPOS Terminal Rental</label>
+                        <input type="text" class="mobileEftposFee form-control" name="mobileEftposFee" value="">
+                        <br>
+                        <label>Countertop Integrated Terminal Rental</label>
+                        <input type="text" class="countertopFee form-control" name="countertopFee" value="">
+                        <br>
+                        <label>Mobile Integrated Terminal Rental</label>
+                        <input type="text" class="mobileIntegratedFee form-control" name="mobileIntegratedFee" value="">
+                        <br>
+
+                      </div>
+                      <div class="col">
+                        <label>Waive for ... months </label> <input type="text" class="form-control" name="mobileEftposMonths" value="" placeholder="how many months?">
+                        <br>
+                        <label>Waive for ... months</label> <input type="text" class="form-control" name="countertopMonths" value="" placeholder="how many months?">
+                        <br>
+                        <label>Waive for ... months</label> <input type="text" class="form-control" name="mobileIntegratedMonths" value="" placeholder="how many months?">
+                        <br>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>Number of Car Charger(s) required?</label>
+                    <input type="text" class="form-control" name="numberCarChargers" pattern="[0-9]*" value="">
+                    <div class="invalid-feedback">Please enter a valid input containing only numbers</div>
+                  </div>
+
+
+                  <div class="subtitle-form ">
+                    <h6>Fees (All fees and charges are exclusive of GST)</h6>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Merchant Service Fee (as a % of Credit Card transaction value, charged at the end of each calendar month):</label>
+                    <input id="merchantServiceFee" type="text" class="form-control" name="merchantServiceFee" value="" required>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>Debit Card Transaction Fee (per Debit Card transaction, charged at the end of each calendar month):</label>
+                    <input id="debitCardFee" type="text" class="form-control" name="debitCardFee" value="" required>
+                  </div>
+
+                  <div class="form-group ">
+                    <label>Do you wish to participate in least cost routing?</label>
+                    <select class=" lcr form-control" name="lcr" required>
+                      <option value="">-</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Least cost routing limit:</label>
+                    <input id="lcrlimit" type="text" class="form-control" name="lcrlimit" value="">
+                    <input id="lcrlimitComment" type="text" class="form-control" name="lcrlimitComment" value="">
+
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>AMEX Merchant Number:</label>
+                    <input type="text" class="form-control" pattern="^\d{10}$" name="amex" value="">
+                    <div class="invalid-feedback">Please enter a 10-digit number</div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Diners Merchant Number:</label>
+                    <input type="text" class="form-control" pattern=".{1,9}|.{11,}" name="diners" value="">
+                    <div class="invalid-feedback">Input value cannot have exactly 10 characters </div>
+                  </div>
+
+
+
+                  <p><strong>% of Card Present/Not Present Transactions (% based on dollar value of transactions):</strong></p>
+
+
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <h6><small>Card Present::</small></h6>
+                        <hr>
+                        <h6><small>Card Not Present (MOTO):</small></h6>
+                      </div>
+
+                      <div class="col">
+                        <input type="text" class="form-control" pattern="^(100|[1-9]?[0-9])\s?%" id="cardPresent" name="cardPresent" onfocus="moveCursorBeforePercent()" value="" placeholder="Card Present" required>
+                        <input type="text" class="form-control" pattern="^(100|[1-9]?[0-9])\s?%" id="cardNotPresent" name="cardNotPresent" value="" onfocus="moveCursorBeforePercent()" placeholder="Card Not Present (MOTO)" required>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>If MOTO has been requested, please provide justification:</label>
+                    <input type="text" class="form-control" name="motoJustification" value="">
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                  Personal Details (Business Owners/Directors)
+                </button>
+              </h2>
+              <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                  <div class="title-form">
+                    <h5>Personal Details (Business Owners/Directors)</h5>
+                  </div>
+
+                  <p>Please capture all applicants (Sole Traders, Partners, Directors, Trustees, Members of an Association, Business Owners and Committee Members) details below. All Business Owners/Directors shall be provided Full Access to the
+                    Merchant
+                    Facility including the ability to perform refunds, access and change the refund password, access information about the merchant facility, request changes and terminate the Merchant Facility.</p>
+                  <p><strong>If you’re a company, a minimum of 2 Directors or any 1 Director and Company Secretary must sign. All partners of a partnership must sign</strong></p>
+
+                  <div class="form-group">
+                    <label>How many people are signing this form?</label>
+                    <select class="form-control howManyDirectors" name="howManyDirectors" required>
+                      <option value="">-</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </div>
+
+
+                  <hr>
+                  <!-- Business Owner Number 1 -->
+                  <p><strong>Business Owner/ Director 1</strong></p>
+
+
+                  <div class="form-group">
+                    <label>Full Name:</label>
+                    <input type="text" class="form-control" name="director1Name" value="" required>
+                    <div class="invalid-feedback">Please fill out this field</div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Position:</label>
+                    <input type="text" class="form-control" name="director1Position" value="" required>
+                    <div class="invalid-feedback">Please fill out this field</div>
+                  </div>
+
+
+
+                  <div class="form-group">
+                    <label>Date of Birth:</label>
+                    <input type="text" pattern="(0[1-9]|[1-2][0-9]|3[01])/(0[1-9]|1[0-2])/([0-9]{4})" placeholder="DD/MM/YYYY" class="form-control" name="director1DOB" value="" required>
+                    <div class="invalid-feedback">Please enter DOB in the format DD/MM/YYYY (e.g. 24/06/1990)</div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Email address:</label>
+                    <input type="email" class="form-control" placeholder="example@domain.com" name="director1Email" value="" required>
+                    <div class="invalid-feedback">Please enter a valid email in the format example@domain.com</div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <h6>Residential Address</h6>
+
+                    <div class="form-group">
+                      <label>C/o or Building</label>
+                      <input type="text" class="form-control" name="director1Building" value="">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Street No. & Name</label>
+                      <input type="text" class="form-control" name="director1Street" value="" required>
+                      <div class="invalid-feedback">Please fill out this field </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Suburb/Town</label>
+                      <input type="text" class="form-control" name="director1Suburb" value="" required>
+                      <div class="invalid-feedback">Please fill out this field </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>State:</label>
+                      <select class="form-control" name="director1State" required>
+                        <option value="">-</option>
+                        <option value="NSW">NSW</option>
+                        <option value="VIC">VIC</option>
+                        <option value="QLD">QLD</option>
+                        <option value="WA">WA</option>
+                        <option value="SA">SA</option>
+                        <option value="TAS">TAS</option>
+                        <option value="ACT">ACT</option>
+                        <option value="NT">NT</option>
+                      </select>
+                      <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Postcode:</label>
+                      <input type="text" pattern="\d{4}" class="form-control" name="director1Postcode" value="" required>
+                      <div class="invalid-feedback">Please enter exactly 4 digits</div>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group ">
+                    <label>Is the Postal address different from Residential Address?</label>
+                    <select class="form-control director1PostalAddress" name="director1postalAddressDif" required>
+                      <option value="">-</option>
+                      <option value="Yes">Yes, different.</option>
+                      <option value="No">No, the same.</option>
+                    </select>
+                    <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                  </div>
+
+
+                  <div class="form-group director1PostalHide">
+                    <h6>Postal Address</h6>
+
+                    <div class="form-group">
+                      <label>C/o or Building</label>
+                      <input type="text" class="form-control" name="director1BuildingPostal" value="">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Street No. & Name</label>
+                      <input type="text" class="form-control" name="director1StreetPostal" value="">
+                      <div class="invalid-feedback">Please fill out this field </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Suburb/Town</label>
+                      <input type="text" class="form-control" name="director1SuburbPostal" value="">
+                      <div class="invalid-feedback">Please fill out this field </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>State:</label>
+                      <select class="form-control" name="director1StatePostal">
+                        <option value="">-</option>
+                        <option value="NSW">NSW</option>
+                        <option value="VIC">VIC</option>
+                        <option value="QLD">QLD</option>
+                        <option value="WA">WA</option>
+                        <option value="SA">SA</option>
+                        <option value="TAS">TAS</option>
+                        <option value="ACT">ACT</option>
+                        <option value="NT">NT</option>
+                      </select>
+                      <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                    </div>
+                    <div class="form-group">
+                      <label>Postcode:</label>
+                      <input type="text" pattern="\d{4}" class="form-control" name="director1PostcodePostal" value="">
+                      <div class="invalid-feedback">Please enter exactly 4 digits</div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <label>Phone (Work):</label>
+                        <input type="text" class="form-control" name="director1PhoneWork" pattern=".{10}" value="" placeholder="Phone (Work)" required>
+                        <div class="invalid-feedback">Phone number must 10 characters</div>
+                      </div>
+                      <div class="col">
+                        <label>Phone (Home):</label>
+                        <input type="text" class="form-control" name="director1PhoneHome" pattern=".{10}" value="" placeholder="Phone (Home)">
+                        <div class="invalid-feedback">Phone number must 10 characters</div>
+                      </div>
+                      <div class="col">
+                        <label>Mobile:</label>
+                        <input type="text" class="form-control" name="director1Mobile" pattern=".{10}" pattern=".{10}" value="" placeholder="Mobile">
+                        <div class="invalid-feedback">Phone number must 10 characters</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <!-- Business Owner Number 2 -->
+
+                  <p><strong>Business Owner/ Director 2</strong></p>
+
+
+                  <div class="form-group">
+                    <label>Full Name:</label>
+                    <br>
+                    <small><small>Put N/A if not applicable</small></small>
+                    <input type="text" class="form-control" name="director2Name" value="" required>
+                    <div class="invalid-feedback">Please fill out this field</div>
+                  </div>
+
+                  <div class="form-group director2Hide">
+
+                    <div class="form-group">
+                      <label>Position:</label>
+                      <input type="text" class="form-control" name="director2Position" value="">
+                      <div class="invalid-feedback">Please fill out this field</div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                      <label>Date of Birth:</label>
+                      <input type="text" pattern="(0[1-9]|[1-2][0-9]|3[01])/(0[1-9]|1[0-2])/([0-9]{4})" placeholder="DD/MM/YYYY" class="form-control" name="director2DOB" value="">
+                      <div class="invalid-feedback">Please enter DOB in the format DD/MM/YYYY (e.g. 24/06/1990)</div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Email address:</label>
+                      <input type="email" class="form-control" placeholder="example@domain.com" name="director2Email" value="">
+                      <div class="invalid-feedback">Please enter a valid email in the format example@domain.com</div>
+                    </div>
+
+
+                    <div class="form-group">
+                      <h6>Residential Address</h6>
+
+                      <div class="form-group">
+                        <label>C/o or Building</label>
+                        <input type="text" class="form-control" name="director2Building" value="">
+                      </div>
+
+                      <div class="form-group">
+                        <label>Street No. & Name</label>
+                        <input type="text" class="form-control" name="director2Street" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Suburb/Town</label>
+                        <input type="text" class="form-control" name="director2Suburb" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>State:</label>
+                        <select class="form-control" name="director2State">
+                          <option value="">-</option>
+                          <option value="NSW">NSW</option>
+                          <option value="VIC">VIC</option>
+                          <option value="QLD">QLD</option>
+                          <option value="WA">WA</option>
+                          <option value="SA">SA</option>
+                          <option value="TAS">TAS</option>
+                          <option value="ACT">ACT</option>
+                          <option value="NT">NT</option>
+                        </select>
+                        <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Postcode:</label>
+                        <input type="text" pattern="\d{4}" class="form-control" name="director2Postcode" value="">
+                        <div class="invalid-feedback">Please enter exactly 4 digits</div>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group ">
+                      <label>Is the Postal address different from Residential Address?</label>
+                      <select class="form-control director2PostalAddress" name="director2postalAddressDif">
+                        <option value="">-</option>
+                        <option value="Yes">Yes, different.</option>
+                        <option value="No">No, the same.</option>
+                      </select>
+                    </div>
+
+
+                    <div class="form-group director2PostalHide">
+                      <h6>Postal Address</h6>
+
+                      <div class="form-group">
+                        <label>C/o or Building</label>
+                        <input type="text" class="form-control" name="director2BuildingPostal" value="">
+                      </div>
+
+                      <div class="form-group">
+                        <label>Street No. & Name</label>
+                        <input type="text" class="form-control" name="director2StreetPostal" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Street No. & Name</label>
+                        <input type="text" class="form-control" name="director2StreetPostal" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Suburb/Town</label>
+                        <input type="text" class="form-control" name="director2SuburbPostal" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>State:</label>
+                        <select class="form-control" name="director2StatePostal">
+                          <option value="">-</option>
+                          <option value="NSW">NSW</option>
+                          <option value="VIC">VIC</option>
+                          <option value="QLD">QLD</option>
+                          <option value="WA">WA</option>
+                          <option value="SA">SA</option>
+                          <option value="TAS">TAS</option>
+                          <option value="ACT">ACT</option>
+                          <option value="NT">NT</option>
+                        </select>
+                        <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Postcode:</label>
+                        <input type="text" class="form-control" pattern="\d{4}" name="director2PostcodePostal" value="">
+                        <div class="invalid-feedback">Please enter exactly 4 digits</div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col">
+                          <label>Phone (Work):</label>
+                          <input type="text" class="form-control" name="director2PhoneWork" pattern=".{10}" value="" placeholder="Phone (Work)">
+                          <div class="invalid-feedback">Phone number must 10 characters</div>
+                        </div>
+                        <div class="col">
+                          <label>Phone (Home):</label>
+                          <input type="text" class="form-control" name="director2PhoneHome" value="" placeholder="Phone (Home)">
+                          <div class="invalid-feedback">Phone number must 10 characters</div>
+                        </div>
+                        <div class="col">
+                          <label>Mobile:</label>
+                          <input type="text" class="form-control" name="director2Mobile" pattern=".{10}" value="" placeholder="Mobile">
+                          <div class="invalid-feedback">Phone number must 10 characters</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+
+
+                  <!-- Business Owner Number 3 -->
+
+                  <p><strong>Business Owner/ Director 3</strong></p>
+
+
+                  <div class="form-group">
+                    <label>Full Name:</label>
+                    <br>
+                    <small><small>Put N/A if not applicable</small></small>
+                    <input type="text" class="form-control" name="director3Name" value="" required>
+                    <div class="invalid-feedback">Please fill out this field</div>
+                  </div>
+
+                  <div class="form-group director3Hide">
+                    <div class="form-group">
+                      <label>Position:</label>
+                      <input type="text" class="form-control" name="director3Position" value="">
+                      <div class="invalid-feedback">Please fill out this field</div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                      <label>Date of Birth:</label>
+                      <input type="text" pattern="(0[1-9]|[1-2][0-9]|3[01])/(0[1-9]|1[0-2])/([0-9]{4})" placeholder="DD/MM/YYYY" class="form-control" name="director3DOB" value="">
+                      <div class="invalid-feedback">Please enter DOB in the format DD/MM/YYYY (e.g. 24/06/1990)</div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Email address:</label>
+                      <input type="email" class="form-control" placeholder="example@domain.com" name="director3Email" value="">
+                      <div class="invalid-feedback">Please enter a valid email in the format example@domain.com</div>
+                    </div>
+
+
+                    <div class="form-group">
+                      <h6>Residential Address</h6>
+
+                      <div class="form-group">
+                        <label>C/o or Building</label>
+                        <input type="text" class="form-control" name="director3Building" value="">
+
+                      </div>
+
+                      <div class="form-group">
+                        <label>Street No. & Name</label>
+                        <input type="text" class="form-control" name="director3Street" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Suburb/Town</label>
+                        <input type="text" class="form-control" name="director3Suburb" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+
+                      </div>
+
+
+                      <div class="form-group">
+                        <label>State:</label>
+                        <select class="form-control" name="director3State">
+                          <option value="">-</option>
+                          <option value="NSW">NSW</option>
+                          <option value="VIC">VIC</option>
+                          <option value="QLD">QLD</option>
+                          <option value="WA">WA</option>
+                          <option value="SA">SA</option>
+                          <option value="TAS">TAS</option>
+                          <option value="ACT">ACT</option>
+                          <option value="NT">NT</option>
+                        </select>
+                        <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Postcode:</label>
+                        <input type="text" class="form-control" pattern="\d{4}" name="director3Postcode" value="">
+                        <div class="invalid-feedback">Please enter exactly 4 digits</div>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group ">
+                      <label>Is the Postal address different from Residential Address?</label>
+                      <select class="form-control director3PostalAddress" name="director3postalAddressDif">
+                        <option value="">-</option>
+                        <option value="Yes">Yes, different.</option>
+                        <option value="No">No, the same.</option>
+                      </select>
+                      <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                    </div>
+
+
+                    <div class="form-group director3PostalHide">
+                      <h6>Postal Address</h6>
+
+                      <div class="form-group">
+                        <label>C/o or Building</label>
+                        <input type="text" class="form-control" name="director3BuildingPostal" value="">
+
+                      </div>
+
+                      <div class="form-group">
+                        <label>Street No. & Name</label>
+                        <input type="text" class="form-control" name="director3StreetPostal" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Suburb/Town</label>
+                        <input type="text" class="form-control" name="director3SuburbPostal" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>State:</label>
+                        <select class="form-control" name="director3StatePostal">
+                          <option value="">-</option>
+                          <option value="NSW">NSW</option>
+                          <option value="VIC">VIC</option>
+                          <option value="QLD">QLD</option>
+                          <option value="WA">WA</option>
+                          <option value="SA">SA</option>
+                          <option value="TAS">TAS</option>
+                          <option value="ACT">ACT</option>
+                          <option value="NT">NT</option>
+                        </select>
+                        <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Postcode:</label>
+                        <input type="text" pattern="\d{4}" class="form-control" name="director3PostcodePostal" value="">
+                        <div class="invalid-feedback">Please enter exactly 4 digits</div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col">
+                          <label>Phone (Work):</label>
+                          <input type="text" class="form-control" name="director3PhoneWork" pattern=".{10}" value="" placeholder="Phone (Work)">
+                          <div class="invalid-feedback">Phone number must 10 characters</div>
+                        </div>
+                        <div class="col">
+                          <label>Phone (Home):</label>
+                          <input type="text" class="form-control" name="director3PhoneHome" value="" pattern=".{10}" placeholder="Phone (Home)">
+                          <div class="invalid-feedback">Phone number must 10 characters</div>
+                        </div>
+                        <div class="col">
+                          <label>Mobile:</label>
+                          <input type="text" class="form-control" name="director3Mobile" pattern=".{10}" value="" placeholder="Mobile">
+                          <div class="invalid-feedback">Phone number must 10 characters</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <!-- Business Owner Number 4 -->
+
+                  <p><strong>Business Owner/ Director 4</strong></p>
+
+
+                  <div class="form-group">
+                    <label>Full Name:</label>
+                    <br>
+                    <small><small>Put N/A if not applicable</small></small>
+                    <input type="text" class="form-control" name="director4Name" value="" required>
+                    <div class="invalid-feedback">Please fill out this field</div>
+                  </div>
+
+                  <div class="form-group director4Hide">
+
+
+
+                    <div class="form-group ">
+                      <label>Position:</label>
+                      <input type="text" class="form-control" name="director4Position" value="">
+                      <div class="invalid-feedback">Please fill out this field</div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                      <label>Date of Birth:</label>
+                      <input type="text" pattern="(0[1-9]|[1-2][0-9]|3[01])/(0[1-9]|1[0-2])/([0-9]{4})" placeholder="DD/MM/YYYY" class="form-control" name="director4DOB" value="">
+                      <div class="invalid-feedback">Please enter DOB in the format DD/MM/YYYY (e.g. 24/06/1990)</div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Email address:</label>
+                      <input type="email" class="form-control" placeholder="example@domain.com" name="director4Email" value="">
+                      <div class="invalid-feedback">Please enter a valid email in the format example@domain.com</div>
+                    </div>
+
+
+                    <div class="form-group">
+                      <h6>Residential Address</h6>
+
+                      <div class="form-group">
+                        <label>C/o or Building</label>
+                        <input type="text" class="form-control" name="director4Building" value="">
+                      </div>
+
+                      <div class="form-group">
+                        <label>Street No. & Name</label>
+                        <input type="text" class="form-control" name="director4Street" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Suburb/Town</label>
+                        <input type="text" class="form-control" name="director4Suburb" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>State:</label>
+                        <select class="form-control" name="director4State">
+                          <option value="">-</option>
+                          <option value="NSW">NSW</option>
+                          <option value="VIC">VIC</option>
+                          <option value="QLD">QLD</option>
+                          <option value="WA">WA</option>
+                          <option value="SA">SA</option>
+                          <option value="TAS">TAS</option>
+                          <option value="ACT">ACT</option>
+                          <option value="NT">NT</option>
+                        </select>
+                        <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Postcode:</label>
+                        <input type="text" pattern="\d{4}" class="form-control" name="director4Postcode" value="">
+                        <div class="invalid-feedback">Please enter exactly 4 digits</div>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group ">
+                      <label>Is the Postal address different from Residential Address?</label>
+                      <select class="form-control director4PostalAddress" name="director4postalAddressDif">
+                        <option value="">-</option>
+                        <option value="Yes">Yes, different.</option>
+                        <option value="No">No, the same.</option>
+                      </select>
+                      <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                    </div>
+
+
+                    <div class="form-group director4PostalHide">
+                      <h6>Postal Address</h6>
+
+                      <div class="form-group">
+                        <label>C/o or Building</label>
+                        <input type="text" class="form-control" name="director4BuildingPostal" value="">
+                      </div>
+
+                      <div class="form-group">
+                        <label>Street No. & Name</label>
+                        <input type="text" class="form-control" name="director4StreetPostal" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Suburb/Town</label>
+                        <input type="text" class="form-control" name="director4SuburbPostal" value="">
+                        <div class="invalid-feedback">Please fill out this field </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>State:</label>
+                        <select class="form-control" name="director4StatePostal">
+                          <option value="">-</option>
+                          <option value="NSW">NSW</option>
+                          <option value="VIC">VIC</option>
+                          <option value="QLD">QLD</option>
+                          <option value="WA">WA</option>
+                          <option value="SA">SA</option>
+                          <option value="TAS">TAS</option>
+                          <option value="ACT">ACT</option>
+                          <option value="NT">NT</option>
+                        </select>
+                        <div class="invalid-feedback">Select an option from the dropdown menu</div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Postcode:</label>
+                        <input type="text" pattern="\d{4}" class="form-control" name="director4PostcodePostal" value="">
+                        <div class="invalid-feedback">Please enter exactly 4 digits</div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col">
+                          <label>Phone (Work):</label>
+                          <input type="text" class="form-control" name="director4PhoneWork" pattern=".{10}" value="" placeholder="Phone (Work)">
+                          <div class="invalid-feedback">Phone number must 10 characters</div>
+                        </div>
+                        <div class="col">
+                          <label>Phone (Home):</label>
+                          <input type="text" class="form-control" pattern=".{10}" name="director4PhoneHome" value="" placeholder="Phone (Home)">
+                          <div class="invalid-feedback">Phone number must 10 characters</div>
+                        </div>
+                        <div class="col">
+                          <label>Mobile:</label>
+                          <input type="text" class="form-control" name="director4Mobile" pattern=".{10}" value="" placeholder="Mobile">
+                          <div class="invalid-feedback">Phone number must 10 characters</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEleven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                  Sales Consultant Details
+                </button>
+              </h2>
+              <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                  <div class="form-group">
+                    <label><strong>Sales Consultant Comments:</strong></label>
+                    <br>
+                    <small>Add comments you have about the application</small>
+                    <input id="comments1" type="text" class="form-control" placeholder="Comment here..." name="commentsLine1" value="">
+                    <input type="text" class="form-control" placeholder="Comment here..." name="commentsLine2" value="">
+                    <input type="text" class="form-control" placeholder="Comment here..." name="commentsLine3" value="">
+                    <input id="highRiskComments" type="text" class="form-control" placeholder="Comment here..." name="highRiskComments" value="">
+
+                  </div>
+
+                  <div class="form-group">
+                    <label>Application Completed by:</label>
+                    <input type="text" class="form-control" name="completedBy" value="EFTPOS Compare">
+                  </div>
+
+                  <div class="form-group">
+                    <label>Suncorp Contact:</label>
+                    <br>
+                    <small><small>Sales Agent Name</small></small>
+                    <input type="text" class="form-control" name="agentName" required autocomplete="true">
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+          </div>
+          <div class="text-center">
+            <button class="btn btn-success btn-lg" type="submit" name="button" onclick="$('form').attr('target', '_blank')">Submit</button>
+
+
+          </div>
+
+
+
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <script src="noflat.js"></script>
+
+
+</body>
+
+</html>
